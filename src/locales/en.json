@@ -1,0 +1,100 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "footer": {
+    "designedby": "Designed with",
+    "designedby2": "by: Xavier Berga"
+  },
+  "home": {
+    "salute": "Hi there!",
+    "im": "I'M"
+  },
+  "home2": {
+    "intro1": "LET ME INTRODUCE MYSELF",
+    "intro2": "I’m Xavi, a computer engineer graduated from the University of Lleida.",
+    "intro3": "Throughout my education and professional experience, I have gained solid expertise in various programming languages, including C/C++, Python, Java, TypeScript, JavaScript, X++ and .NET, which allows me to easily adapt to different environments and projects.",
+    "intro4": "My main areas of interest focus on the design and development of new products and technologies, particularly in fields such as Artificial Intelligence, embedded systems, the Internet of Things (IoT) and Blockchain technology. I’m highly motivated by innovation and the pursuit of efficient solutions that deliver real value to people and organizations.",
+    "intro5": "In addition, I apply my passion for web development by building modern and scalable applications, as well as robust APIs, using cutting-edge libraries and frameworks such as Angular, React and ExpressJS. My goal is to create reliable, secure, and easy-to-maintain solutions that bridge technology with user experience.",
+    "findmeon": "FIND ME ON",
+    "connectme": "Feel free to connect with me"
+  },
+  "typewriter": [
+    "Software Developer",
+    "IoT Engineer",
+    "Blockchain Expert",
+    "Hardware Enthusiast",
+    "Open Source Contributor"
+  ],
+  "about": {
+    "more": "Discover more about me!",
+    "content1": "I am Xavier Berga, a computer engineer born and raised in Lleida (Catalonia) and now living in Zaragoza (Spain).",
+    "content2": "I currently work as a software developer specialized in Microsoft Dynamics 365 F&O at IFR, a company that is part of the Vall Companys Group, where I contribute to the development and implementation of solutions that optimize business processes.",
+    "content3": "In addition to my full-time job, I dedicate part of my time to projects where I apply new technologies and explore innovative ideas. Some of them are available in the 'Projects' section of this website.",
+    "content4": "I am also the co-founder of two companies: one focused on the application of IoT and Artificial Intelligence technologies in the agricultural sector, and another dedicated to data monitoring for biosecurity in farms and in chemical and food industries using IoT technologies.",
+    "content5": "Beyond the world of code and technology, I have other passions that inspire me every day and help me maintain a creative and personal balance:",
+    "skillset": "Professional Skillset",
+    "serverapps": "My Server Apps",
+    "tools": "Tools I Use",
+    "code": "Days I Code",
+    "read": "Reading books on economics and geopolitics.",
+    "travel": "Exploring and getting lost in big cities.",
+    "nature": "Hiking and enjoying nature on mountain trails.",
+    "gym": "Strength training at the gym.",
+    "drive": "Sporty driving with performance-modified cars.",
+    "cinema": "Watching thought-provoking series and movies."
+  },
+  "projects": {
+    "recent": "Featured Projects",
+    "recentDescription": "A selection of the most relevant projects I have worked on recently.",
+
+    "title1": "Personal Portfolio",
+    "desc1": "The website you are visiting right now is my personal portfolio. It is built with React (Meta) and was my first project using this framework. Beyond being a presentation site, it has also been a learning lab where I experimented with new frontend technologies. You can check the code on GitHub.",
+    "src1": "https://github.com/rootkit0",
+    "demo1": "https://xavierberga.com",
+
+    "title2": "Alimentando con Ciencia",
+    "desc2": "Company dedicated to offering specialized audits and training for the food industry, as well as cross-platform digital solutions to digitize, secure, and optimize data management. The project combines technical expertise, consultancy, and software development to help food companies adapt to the sector’s evolving needs.",
+    "demo2": "https://alimentandoconciencia.com",
+
+    "title3": "AgroMind",
+    "desc3": "Business initiative focused on selling and installing advanced agricultural sensors integrated with a proprietary AI model. This intelligent platform helps optimize decision-making, reduce water consumption, accurately detect pests, and promote sustainable practices such as the use of organic fertilizers and regenerative agriculture.",
+    "demo3": "https://agromind.es",
+
+    "title4": "AI Platform with LLM Models",
+    "desc4": "Application deployed in a Docker container on my home server and connected locally with Ollama to run open-source LLM models. The platform makes it possible to test and adapt different AI models, some of which are trained for very specific use cases. Contact me if you’d like more details.",
+    "src4": "https://github.com/open-webui/open-webui",
+    "demo4": "https://ia.xavierberga.com",
+
+    "title5": "Personal Cloud: NextCloud",
+    "desc5": "The server started out as a NAS to store memories and backups and provide local access. With the integration of Nextcloud, it has evolved into a complete and secure personal cloud that allows me to manage dozens of terabytes and use a wide range of useful applications.",
+    "src5": "https://github.com/nextcloud",
+    "demo5": "https://nextcloud.xavierberga.com",
+
+    "title6": "Home Automation: HomeAssistant",
+    "desc6": "Open-source home automation platform deployed on my server. It currently manages a few smart devices, but I have several DIY projects planned to expand its functionality. It provides a solid foundation for turning the home into a more comfortable, efficient, and personalized environment.",
+    "src6": "https://github.com/home-assistant",
+    "demo6": "https://home.xavierberga.com",
+
+    "title7": "Ad Blocking with AdGuard",
+    "desc7": "AdGuard deployed with Docker to block ads, malware, and trackers across all my devices. The system works at the network level, transparently, and improves both security and browsing speed. It is also remotely accessible, and I offer free credentials upon request.",
+    "src7": "https://github.com/AdguardTeam/AdGuardHome",
+    "demo7": "https://adguard.xavierberga.com",
+
+    "title8": "MQTT Broker for IoT",
+    "desc8": "Eclipse Mosquitto deployed as a lightweight MQTT messaging broker to coordinate communication between the different devices in my IoT ecosystem. Thanks to this service, all devices exchange data quickly and reliably. I also provide free access for development environments upon request, for those who want to experiment.",
+    "src8": "https://github.com/eclipse-mosquitto/mosquitto",
+    "demo8": "mqtt://mqtt.xavierberga.com",
+
+    "title9": "Automation with n8n",
+    "desc9": "n8n deployed on my own server to build automation workflows between multiple applications and services, without the need for coding. It allows API integration, data management, and process execution in a flexible and visual way. I also provide free credentials upon request for those who want to try it and experiment.",
+    "src9": "https://github.com/n8n-io/n8n",
+    "demo9": "https://n8n.xavierberga.com"
+  },
+  "resume": {
+    "download": "Download CV (English)"
+  }
+}

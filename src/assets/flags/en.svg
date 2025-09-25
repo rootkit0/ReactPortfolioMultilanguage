@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7410 3900" shape-rendering="crispEdges">
+  <!-- Fondo rojo -->
+  <rect width="7410" height="3900" fill="#b22234"></rect>
+  
+  <!-- Franjas blancas -->
+  <g fill="#fff">
+    <rect y="300" width="7410" height="300"></rect>
+    <rect y="900" width="7410" height="300"></rect>
+    <rect y="1500" width="7410" height="300"></rect>
+    <rect y="2100" width="7410" height="300"></rect>
+    <rect y="2700" width="7410" height="300"></rect>
+    <rect y="3300" width="7410" height="300"></rect>
+  </g>
+  
+  <!-- Canton azul -->
+  <rect width="2964" height="2100" fill="#3c3b6e"></rect>
+  
+  <!-- Estrellas -->
+  <g fill="#fff">
+    <symbol id="star" viewBox="0 0 100 100">
+      <polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35"></polygon>
+    </symbol>
+    
+    <g id="row6">
+      <use href="#star" x="0" width="330" height="330"></use>
+      <use href="#star" x="494" width="330" height="330"></use>
+      <use href="#star" x="988" width="330" height="330"></use>
+      <use href="#star" x="1482" width="330" height="330"></use>
+      <use href="#star" x="1976" width="330" height="330"></use>
+      <use href="#star" x="2470" width="330" height="330"></use>
+    </g>
+    <g id="row5">
+      <use href="#star" x="247" width="330" height="330"></use>
+      <use href="#star" x="741" width="330" height="330"></use>
+      <use href="#star" x="1235" width="330" height="330"></use>
+      <use href="#star" x="1729" width="330" height="330"></use>
+      <use href="#star" x="2223" width="330" height="330"></use>
+    </g>
+    
+    <use href="#row6" y="0"></use>
+    <use href="#row5" y="210"></use>
+    <use href="#row6" y="420"></use>
+    <use href="#row5" y="630"></use>
+    <use href="#row6" y="840"></use>
+    <use href="#row5" y="1050"></use>
+    <use href="#row6" y="1260"></use>
+    <use href="#row5" y="1470"></use>
+    <use href="#row6" y="1680"></use>
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+Developer: Xavier Berga
+Website: https://www.xavierberga.com
+Location: Zaragoza, Spain
+Specialities: IoT, AI, Embedded Systems, Web Development
