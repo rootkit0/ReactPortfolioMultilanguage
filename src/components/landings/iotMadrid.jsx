@@ -24,7 +24,7 @@ function IoTMadrid() {
   });
 
   useEffect(() => {
-    document.title = t("landingIOT.metaTitle");
+    document.title = `${t("landingIOT.metaTitle")} ${CITY} | Xavier Berga`;
   }, [t]);
 
   const update = (key) => (e) =>
