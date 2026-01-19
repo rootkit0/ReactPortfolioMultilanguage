@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import Tilt from "react-parallax-tilt";
 
 import homeLogo from "../../assets/images/home-main.png";
-import Particle from "../particle";
 import Home2 from "./home2";
 import Type from "./type";
 
@@ -15,7 +14,6 @@ function Home() {
   return (
     <section>
       <Container fluid className="home-section section-block section-hero" id="home">
-        <Particle />
         <Container className="home-content">
           <Row className="align-items-center g-4">
             <Col md={7} className="home-header text-center text-md-start">

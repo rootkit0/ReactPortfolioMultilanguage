@@ -2,7 +2,7 @@
 <html lang="es-ES">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
     <!-- Indexación -->
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
@@ -11,21 +11,29 @@
     <meta name="format-detection" content="telephone=yes" />
     <meta name="theme-color" content="#0b1220" />
 
+    <!-- Performance: fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+
     <!-- Canonical -->
     <link rel="canonical" href="https://www.xavierberga.com/" />
-    <link rel="icon" href="https://www.xavierberga.com/logo.ico" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="https://www.xavierberga.com/sitemap.xml" />
+
+    <!-- Icons -->
+    <link rel="icon" href="/logo.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Title + Description -->
-    <title>Ingeniero IA e IoT en Zaragoza, Barcelona y Lleida | Xavier Berga</title>
+    <title>Ingeniero IA e IoT | Zaragoza, Barcelona, Lleida y Madrid | Xavier Berga</title>
     <meta
       name="description"
-      content="Ingeniero especializado en Inteligencia Artificial (LLMs, visión, automatización), IoT industrial e Industria 4.0. Proyectos en Zaragoza, Barcelona y Lleida: diseño, desarrollo, despliegue y seguridad."
-    />
-
-    <!-- Keywords -->
-    <meta
-      name="keywords"
-      content="inteligencia artificial Zaragoza, IoT Zaragoza, ingeniero IA Zaragoza, consultor IA Barcelona, IoT Barcelona, inteligencia artificial Lleida, IoT Lleida, Industria 4.0, edge computing, sensores IoT, machine learning, LLM, visión artificial, automatización, ciberseguridad IoT, blockchain, smart contracts"
+      content="Ingeniero especializado en Inteligencia Artificial (LLMs, visión, automatización) e IoT (firmware, sensores, MQTT, edge y plataforma). Servicios en Zaragoza, Barcelona, Lleida y Madrid."
     />
     <meta name="author" content="Xavier Berga" />
 
@@ -37,14 +45,24 @@
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Xavier Berga" />
-    <meta property="og:title" content="Ingeniero IA e IoT en Zaragoza, Barcelona y Lleida | Xavier Berga" />
-    <meta property="og:description" content="Soluciones de IA e IoT industrial para empresas: analítica, automatización, edge, sensores y seguridad. Servicio en Zaragoza, Barcelona y Lleida." />
+    <meta property="og:title" content="Ingeniero IA e IoT | Zaragoza, Barcelona, Lleida y Madrid | Xavier Berga" />
+    <meta
+      property="og:description"
+      content="Soluciones de IA e IoT: LLMs, visión, automatización, firmware, sensores, edge y seguridad. Servicio en Zaragoza, Barcelona, Lleida y Madrid."
+    />
     <meta property="og:url" content="https://www.xavierberga.com/" />
     <meta property="og:image" content="https://www.xavierberga.com/og-image.png" />
-    <meta property="og:image:alt" content="Xavier Berga - Ingeniero IA e IoT en Zaragoza, Barcelona y Lleida" />
+    <meta property="og:image:alt" content="Xavier Berga - Ingeniería IA e IoT" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ingeniero IA e IoT en Zaragoza, Barcelona y Lleida | Xavier Berga" />
-    <meta name="twitter:description" content="IA (LLMs, visión, automatización) + IoT industrial + Industria 4.0. Proyectos en Zaragoza, Barcelona y Lleida." />
+    <meta name="twitter:title" content="Ingeniero IA e IoT | Zaragoza, Barcelona, Lleida y Madrid | Xavier Berga" />
+    <meta
+      name="twitter:description"
+      content="IA (LLMs, visión, automatización) + IoT (firmware, sensores, MQTT, edge). Servicios en Zaragoza, Barcelona, Lleida y Madrid."
+    />
     <meta name="twitter:image" content="https://www.xavierberga.com/og-image.png" />
 
     <!-- Datos estructurados -->
@@ -58,14 +76,27 @@
             "url": "https://www.xavierberga.com/",
             "name": "Xavier Berga",
             "inLanguage": "es-ES",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.xavierberga.com/projects",
+              "query-input": "required name=search_term_string"
+            },
             "publisher": { "@id": "https://www.xavierberga.com/#person" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.xavierberga.com/#webpage",
+            "url": "https://www.xavierberga.com/",
+            "name": "Xavier Berga",
+            "isPartOf": { "@id": "https://www.xavierberga.com/#website" },
+            "inLanguage": "es-ES"
           },
           {
             "@type": "Person",
             "@id": "https://www.xavierberga.com/#person",
             "name": "Xavier Berga",
             "url": "https://www.xavierberga.com/",
-            "image": "https://www.xavierberga.com/logo.ico",
+            "image": "https://www.xavierberga.com/og-image.png",
             "jobTitle": "Ingeniero en IoT e Inteligencia Artificial",
             "telephone": "+34644369266",
             "sameAs": [
@@ -78,12 +109,13 @@
               "Machine Learning",
               "LLM",
               "Visión Artificial",
+              "Automatización",
               "IoT",
-              "Industria 4.0",
+              "Firmware",
+              "Sensores",
+              "MQTT",
               "Edge Computing",
-              "Ciberseguridad IoT",
-              "Blockchain",
-              "Smart Contracts"
+              "Ciberseguridad IoT"
             ]
           },
           {
@@ -91,37 +123,30 @@
             "@id": "https://www.xavierberga.com/#service",
             "name": "Servicios de IA e IoT - Xavier Berga",
             "url": "https://www.xavierberga.com/",
-            "image": "https://www.xavierberga.com/logo.ico",
-            "description": "Ingeniería y consultoría en Inteligencia Artificial e IoT industrial: diseño, desarrollo, despliegue, integración y seguridad.",
+            "image": "https://www.xavierberga.com/og-image.png",
+            "description": "Ingeniería y consultoría en Inteligencia Artificial e IoT: diseño, desarrollo, despliegue, integración y seguridad.",
             "telephone": "+34644369266",
             "provider": { "@id": "https://www.xavierberga.com/#person" },
             "areaServed": [
               { "@type": "City", "name": "Zaragoza" },
               { "@type": "City", "name": "Barcelona" },
-              { "@type": "City", "name": "Lleida" }
+              { "@type": "City", "name": "Lleida" },
+              { "@type": "City", "name": "Madrid" }
             ],
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Calle Miguel Servet 34",
-              "addressLocality": "Zaragoza",
-              "addressRegion": "Aragón",
-              "postalCode": "50013",
-              "addressCountry": "ES"
-            },
             "contactPoint": [
               {
                 "@type": "ContactPoint",
                 "telephone": "+34644369266",
                 "contactType": "sales",
                 "areaServed": "ES",
-                "availableLanguage": ["es", "en"]
+                "availableLanguage": ["es", "ca", "en"]
               }
             ],
             "serviceType": [
               "Consultoría en Inteligencia Artificial",
               "Desarrollo de IA (LLM, visión, automatización)",
-              "IoT Industrial y Edge Computing",
-              "Integración Industria 4.0",
+              "IoT (firmware, sensores, MQTT, edge)",
+              "Integración de plataformas y datos",
               "Ciberseguridad IoT"
             ]
           }
@@ -133,20 +158,21 @@
   <body>
     <noscript>
       <header>
-        <h1>Ingeniero de Inteligencia Artificial e IoT en Zaragoza, Barcelona y Lleida</h1>
+        <h1>Ingeniero de Inteligencia Artificial e IoT</h1>
         <p>
-          Desarrollo e integro soluciones de IA (LLMs, visión artificial, automatización) e IoT industrial para Industria 4.0:
-          sensores, edge computing, analítica y seguridad.
+          Desarrollo e integro soluciones de IA (LLMs, visión artificial, automatización) e IoT (firmware, sensores, MQTT, edge y plataforma).
         </p>
         <p>
-          Contacto: <a href="tel:+34644369266">+34 644 36 92 66</a> ·
-          <a href="https://www.xavierberga.com/">xavierberga.com</a>
+          Servicios en Zaragoza, Barcelona, Lleida y Madrid. Contacto:
+          <a href="tel:+34644369266">+34 644 36 92 66</a>
         </p>
         <nav>
           <ul>
-            <li>IA para empresas en Zaragoza, Barcelona y Lleida</li>
-            <li>IoT industrial: sensores, gateways, edge y cloud</li>
-            <li>Seguridad IoT y arquitectura escalable</li>
+            <li><a href="https://www.xavierberga.com/projects">Proyectos</a></li>
+            <li><a href="https://www.xavierberga.com/aboutme">Sobre mí</a></li>
+            <li><a href="https://www.xavierberga.com/resume">Currículum</a></li>
+            <li><a href="https://www.xavierberga.com/ia-zaragoza">IA Zaragoza</a></li>
+            <li><a href="https://www.xavierberga.com/iot-zaragoza">IoT Zaragoza</a></li>
           </ul>
         </nav>
       </header>

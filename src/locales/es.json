@@ -12,7 +12,19 @@
   "home": {
     "salute": "¡Hola!",
     "im": "Me llamo",
-    "tagline": "Construyo soluciones usando tecnologías IoT e inteligencia artificial con foco en la calidad, la seguridad y una experiencia de usuario limpia."
+    "tagline": "Construyo soluciones usando tecnologías IoT e inteligencia artificial con foco en la calidad, la seguridad y una experiencia de usuario limpia.",
+    "services": {
+      "title": "SERVICIOS",
+      "subtitle": "Soluciones de IA e IoT adaptadas a producto, con enfoque en calidad, seguridad y despliegue real.",
+      "ai": {
+        "title": "Inteligencia Artificial",
+        "desc": "LLMs, visión, automatización, analítica y MLOps."
+      },
+      "iot": {
+        "title": "IoT",
+        "desc": "Firmware, sensores, conectividad, plataforma y mantenimiento."
+      }
+    }
   },
   "home2": {
     "intro1": "ME PRESENTO",
@@ -108,5 +120,90 @@
   },
   "resume": {
     "download": "Descargar CV (Español)"
+  },
+  "landing": {
+    "common": {
+      "kicker": "Servicios en ",
+      "kicker2": "y en remoto",
+      "ctaWhatsApp": "Hablar por WhatsApp",
+      "ctaEmail": "Enviar email",
+      "howTitle": "Cómo trabajo",
+      "formTitle": "Cuéntame tu caso",
+      "formLead": "Rellena lo mínimo y lo enviamos por WhatsApp o por email con el mensaje ya preparado.",
+      "sendWhatsApp": "Enviar por WhatsApp",
+      "sendEmail": "Enviar por email",
+      "service": "Servicio",
+      "name": "Nombre",
+      "company": "Empresa",
+      "email": "Email",
+      "message": "Mensaje",
+      "source": "Origen",
+      "namePh": "Tu nombre",
+      "companyPh": "Tu empresa (opcional)",
+      "emailPh": "Tu email (opcional)",
+      "steps": {
+        "s1": { "title": "Diagnóstico", "text": "Objetivo, métricas, datos y restricciones." },
+        "s2": { "title": "PoC", "text": "Prototipo rápido para validar viabilidad." },
+        "s3": { "title": "Producto", "text": "Integración, seguridad y UX limpia." },
+        "s4": { "title": "Evolución", "text": "Monitorización, mejoras y retraining." }
+      }
+    }
+  },
+  "landingAI": {
+    "metaTitle": "Inteligencia Artificial en ",
+    "heroTitle": "Inteligencia Artificial para productos que funcionan",
+    "heroLead": "Diseño e integro soluciones de IA (visión, predicción, anomalías, NLP/LLMs) con foco en calidad, seguridad y una experiencia de usuario clara.",
+    "proof1": "IA aplicada",
+    "proof2": "PoC → Producción",
+    "proof3": "Integración con plataforma",
+    "helpTitle": "¿En qué te puedo ayudar?",
+    "cards": {
+      "c1": { "title": "IA aplicada a negocio", "text": "Forecasting, scoring, optimización y modelos que impactan en métricas." },
+      "c2": { "title": "Visión por computador", "text": "Detección, clasificación, conteo, trazabilidad y automatización con cámaras." },
+      "c3": { "title": "LLMs y automatización", "text": "RAG con tus documentos, asistentes internos y flujos con APIs." },
+      "c4": { "title": "MLOps y despliegue", "text": "Entrenamiento, validación, monitorización y despliegue robusto (cloud/edge)." },
+      "c5": { "title": "Integración con plataforma", "text": "APIs, pipelines de datos y seguridad para que la IA aporte valor real." },
+      "c6": { "title": "Auditoría y roadmap", "text": "Revisión técnica y plan accionable: datos, arquitectura, costes y riesgos." }
+    },
+    "form": {
+      "serviceName": "Inteligencia Artificial",
+      "emailSubject": "Consulta: Inteligencia Artificial en Zaragoza",
+      "messagePh": "Cuéntame el objetivo, qué datos tienes y cómo lo estás haciendo ahora."
+    }
+  },
+  "landingIOT": {
+    "metaTitle": "IoT en ",
+    "heroTitle": "IoT de principio a fin: sensores, firmware y plataforma",
+    "heroLead": "Firmware, sensórica, conectividad y plataforma (MQTT, gateways, dashboards, cloud/edge) con foco en fiabilidad, seguridad y escalabilidad.",
+    "proof1": "Firmware & sensores",
+    "proof2": "Validación en campo",
+    "proof3": "Plataforma + datos",
+    "servicesTitle": "Servicios IoT",
+    "cards": {
+      "c1": { "title": "Firmware", "text": "Estabilidad, consumo, OTA, telemetría y diagnósticos." },
+      "c2": { "title": "Sensórica y prototipos", "text": "Selección, calibración y validación en condiciones reales." },
+      "c3": { "title": "Conectividad", "text": "MQTT, gateways, tolerancia a fallos y conectividad robusta." },
+      "c4": { "title": "Plataforma", "text": "APIs, backend, dashboards, alertas y gestión de dispositivos." },
+      "c5": { "title": "Seguridad", "text": "Cifrado, autenticación, hardening y control de acceso." },
+      "c6": { "title": "Mantenimiento", "text": "Monitorización, métricas, logs y mejora continua." }
+    },
+    "sectorsTitle": "Sectores donde encaja muy bien",
+    "sectors": {
+      "s1": { "title": "Agrícola", "text": "Monitorización, riego, clima, trazabilidad y optimización." },
+      "s2": { "title": "Ganadero", "text": "Bienestar animal, alertas y detección temprana." },
+      "s3": { "title": "Industria", "text": "Anomalías, mantenimiento predictivo, OEE y calidad." },
+      "s4": { "title": "Alimentaria", "text": "Bioseguridad, parámetros críticos y auditoría." }
+    },
+    "form": {
+      "serviceName": "IoT",
+      "emailSubject": "Consulta: IoT en Zaragoza",
+      "messagePh": "Cuéntame qué quieres medir/controlar, entorno, conectividad y fase del proyecto."
+    }
+  },
+  "cities": {
+    "zaragoza": "Zaragoza",
+    "barcelona": "Barcelona",
+    "lleida": "Lleida",
+    "madrid": "Madrid"
   }
 }

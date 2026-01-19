@@ -1,7 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./projectCards";
-import Particle from "../particle";
 
 import logo from "../../assets/logos/logo.png";
 import alimentando from "../../assets/logos/alimentando-logo.png";
@@ -20,7 +19,6 @@ function Projects() {
   return (
     <>
       <Container fluid className="section-block section-projects-hero">
-        <Particle />
         <Container className="section-inner">
           <h1 className="section-title gradient-heading">
             <b>{t("projects.recent")}</b>
@@ -129,7 +127,7 @@ function Projects() {
             <Col xs={12} md={6} lg={6} xl={5} className="project-card">
               <ProjectCard
                 imgPath={mqtt}
-                openSource={true}
+                openSource={false}
                 title={t("projects.title8")}
                 description={t("projects.desc8")}
                 srcLink={t("projects.src8")}

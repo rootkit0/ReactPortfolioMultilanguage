@@ -8,6 +8,14 @@ import Projects from "./components/projects/projects";
 import Footer from "./components/footer";
 import Resume from "./components/resume/resume";
 import ScrollToTop from "./components/scrollToTop";
+import AIZaragoza from "./components/landings/aiZaragoza";
+import IoTZaragoza from "./components/landings/iotZaragoza";
+import AIBarcelona from "./components/landings/aiBarcelona";
+import IoTBarcelona from "./components/landings/iotBarcelona";
+import AILleida from "./components/landings/aiLleida";
+import IoTLleida from "./components/landings/iotLleida";
+import AIMadrid from "./components/landings/aiMadrid";
+import IoTMadrid from "./components/landings/iotMadrid";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -32,6 +40,14 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/aboutme" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/ia-zaragoza" element={<AIZaragoza />} />
+          <Route path="/iot-zaragoza" element={<IoTZaragoza />} />
+          <Route path="/ia-barcelona" element={<AIBarcelona />} />
+          <Route path="/iot-barcelona" element={<IoTBarcelona />} />
+          <Route path="/ia-lleida" element={<AILleida />} />
+          <Route path="/iot-lleida" element={<IoTLleida />} />
+          <Route path="/ia-madrid" element={<AIMadrid />} />
+          <Route path="/iot-madrid" element={<IoTMadrid />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

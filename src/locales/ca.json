@@ -12,7 +12,21 @@
   "home": {
     "salute": "Benvingut/da!",
     "im": "Sóc el",
-    "tagline": "Construeixo solucions amb tecnologies IoT i intel·ligència artificial amb focus en la qualitat, la seguretat i una experiència d’usuari neta."
+    "tagline": "Construeixo solucions amb tecnologies IoT i intel·ligència artificial amb focus en la qualitat, la seguretat i una experiència d’usuari neta.",
+    "home": {
+    "services": {
+      "title": "SERVEIS",
+      "subtitle": "Solucions d’IA i IoT com a producte: qualitat, seguretat i desplegament real.",
+      "ai": {
+        "title": "Intel·ligència Artificial",
+        "desc": "LLMs, visió, automatització, analítica i MLOps."
+      },
+      "iot": {
+        "title": "IoT",
+        "desc": "Firmware, sensors, connectivitat, plataforma i manteniment."
+      }
+    }
+  }
   },
   "home2": {
     "intro1": "EM PRESENTO",
@@ -108,5 +122,90 @@
 
   "resume": {
     "download": "Descarregar CV (Castellà)"
+  },
+  "landing": {
+    "common": {
+      "kicker": "Serveis a ",
+      "kicker2": "i en remot",
+      "ctaWhatsApp": "Parlar per WhatsApp",
+      "ctaEmail": "Enviar email",
+      "howTitle": "Com treballo",
+      "formTitle": "Explica’m el teu cas",
+      "formLead": "Omple el mínim i envia-ho per WhatsApp o per email amb el missatge ja preparat.",
+      "sendWhatsApp": "Enviar per WhatsApp",
+      "sendEmail": "Enviar per email",
+      "service": "Servei",
+      "name": "Nom",
+      "company": "Empresa",
+      "email": "Email",
+      "message": "Missatge",
+      "source": "Origen",
+      "namePh": "El teu nom",
+      "companyPh": "La teva empresa (opcional)",
+      "emailPh": "El teu email (opcional)",
+      "steps": {
+        "s1": { "title": "Diagnosi", "text": "Objectiu, mètriques, dades i restriccions." },
+        "s2": { "title": "PoC", "text": "Prototip ràpid per validar viabilitat." },
+        "s3": { "title": "Producte", "text": "Integració, seguretat i UX neta." },
+        "s4": { "title": "Evolució", "text": "Monitorització, millores i retraining." }
+      }
+    }
+  },
+  "landingAI": {
+    "metaTitle": "Intel·ligència Artificial a ",
+    "heroTitle": "Intel·ligència Artificial per a productes que funcionen",
+    "heroLead": "Dissenyo i integro solucions d’IA (visió, predicció, anomalies, NLP/LLMs) amb focus en qualitat, seguretat i una experiència d’usuari clara.",
+    "proof1": "IA aplicada",
+    "proof2": "PoC → Producció",
+    "proof3": "Integració amb plataforma",
+    "helpTitle": "En què et puc ajudar?",
+    "cards": {
+      "c1": { "title": "IA aplicada a negoci", "text": "Forecasting, scoring, optimització i models amb impacte real." },
+      "c2": { "title": "Visió per computador", "text": "Detecció, classificació, comptatge, traçabilitat i automatització." },
+      "c3": { "title": "LLMs i automatització", "text": "RAG amb la teva documentació, assistents i fluxos amb APIs." },
+      "c4": { "title": "MLOps i desplegament", "text": "Entrenament, validació, monitorització i desplegament (cloud/edge)." },
+      "c5": { "title": "Integració amb plataforma", "text": "APIs, pipelines de dades i seguretat perquè l’IA aporti valor." },
+      "c6": { "title": "Auditoria i roadmap", "text": "Revisió tècnica + pla accionable: dades, arquitectura, costos i riscos." }
+    },
+    "form": {
+      "serviceName": "Intel·ligència Artificial",
+      "emailSubject": "Consulta: Intel·ligència Artificial a Saragossa",
+      "messagePh": "Explica’m l’objectiu, quines dades tens i com ho fas ara."
+    }
+  },
+  "landingIOT": {
+    "metaTitle": "IoT a ",
+    "heroTitle": "IoT d’extrem a extrem: sensors, firmware i plataforma",
+    "heroLead": "Firmware, sensòrica, connectivitat i plataforma (MQTT, gateways, dashboards, cloud/edge) amb focus en fiabilitat, seguretat i escalabilitat.",
+    "proof1": "Firmware i sensors",
+    "proof2": "Validació al camp",
+    "proof3": "Plataforma + dades",
+    "servicesTitle": "Serveis IoT",
+    "cards": {
+      "c1": { "title": "Firmware", "text": "Estabilitat, consum, OTA, telemetria i diagnòstics." },
+      "c2": { "title": "Sensòrica i prototips", "text": "Selecció, calibratge i validació en condicions reals." },
+      "c3": { "title": "Connectivitat", "text": "MQTT, gateways, tolerància a fallades i connectivitat robusta." },
+      "c4": { "title": "Plataforma", "text": "APIs, backend, dashboards, alertes i gestió de dispositius." },
+      "c5": { "title": "Seguretat", "text": "Xifrat, autenticació, hardening i control d’accés." },
+      "c6": { "title": "Manteniment", "text": "Monitorització, mètriques, logs i millora contínua." }
+    },
+    "sectorsTitle": "Sectors on encaixa molt bé",
+    "sectors": {
+      "s1": { "title": "Agrícola", "text": "Monitorització, reg, clima, traçabilitat i optimització." },
+      "s2": { "title": "Ramader", "text": "Benestar animal, alertes i detecció primerenca." },
+      "s3": { "title": "Indústria", "text": "Anomalies, manteniment predictiu, OEE i qualitat." },
+      "s4": { "title": "Alimentària", "text": "Bioseguretat, paràmetres crítics i auditoria." }
+    },
+    "form": {
+      "serviceName": "IoT",
+      "emailSubject": "Consulta: IoT a Saragossa",
+      "messagePh": "Explica’m què vols mesurar/controlar, entorn, connectivitat i fase del projecte."
+    }
+  },
+  "cities": {
+    "zaragoza": "Saragossa",
+    "barcelona": "Barcelona",
+    "lleida": "Lleida",
+    "madrid": "Madrid"
   }
 }

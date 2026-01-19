@@ -5,7 +5,6 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import { useTranslation } from "react-i18next";
 
-import Particle from "../particle";
 import pdfES from "../../assets/documents/CV_XavierBerga_ES.pdf";
 import pdfEN from "../../assets/documents/CV_XavierBerga_EN.pdf";
 
@@ -44,7 +43,6 @@ function ResumeNew() {
   return (
     <>
       <Container fluid className="section-block section-resume-top">
-        <Particle />
         <Container className="section-inner text-center">
           <div className="resume-cta">
             <Button
