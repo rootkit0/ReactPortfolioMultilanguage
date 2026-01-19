@@ -120,7 +120,9 @@
     "demo9": "https://n8n.xavierberga.com"
   },
   "resume": {
-    "download": "Download CV (English)"
+    "title": "Resume",
+    "subtitle": "Experience, technologies and projects. You can download the PDF version below.",
+    "download": "Download CV"
   },
   "landing": {
     "common": {

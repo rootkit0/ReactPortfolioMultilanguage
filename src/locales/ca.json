@@ -120,9 +120,10 @@
     "src9": "https://github.com/n8n-io/n8n",
     "demo9": "https://n8n.xavierberga.com"
   },
-
   "resume": {
-    "download": "Descarregar CV (Castellà)"
+    "title": "Currículum",
+    "subtitle": "Experiència, tecnologies i projectes. Pots descarregar la versió en PDF a sota.",
+    "download": "Descarregar CV"
   },
   "landing": {
     "common": {

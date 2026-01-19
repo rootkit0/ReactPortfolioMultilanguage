@@ -851,3 +851,11 @@ a{ color:inherit; text-decoration:none; }
     padding: 0 14px;
   }
 }
+
+.section-resume-top .section-subtitle{
+  margin-bottom: 0;
+}
+
+.section-resume-doc{
+  padding-top: 18px;
+}

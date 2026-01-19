@@ -120,7 +120,9 @@
     "demo9": "https://n8n.xavierberga.com"
   },
   "resume": {
-    "download": "Descargar CV (Español)"
+    "title": "Currículum",
+    "subtitle": "Experiencia, tecnologías y proyectos. Si quieres una versión en PDF, puedes descargarla abajo.",
+    "download": "Descargar CV"
   },
   "landing": {
     "common": {

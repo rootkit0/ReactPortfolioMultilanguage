@@ -41,23 +41,8 @@ function Home() {
   };
 
   useEffect(() => {
-    if (!isMobile || !gyroEnabled) return;
-
-    const handle = (e) => {
-      const beta = e.beta ?? 0;
-      const gamma = e.gamma ?? 0;
-
-      const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
-
-      const x = clamp(beta / 10, -6, 6);
-      const y = clamp(gamma / 10, -6, 6);
-
-      setAngles({ x, y });
-    };
-
-    window.addEventListener("deviceorientation", handle, true);
-    return () => window.removeEventListener("deviceorientation", handle, true);
-  }, [isMobile, gyroEnabled]);
+    if (isMobile && !isIOS) setGyroEnabled(true);
+  }, [isMobile, isIOS]);
 
   return (
     <section>
