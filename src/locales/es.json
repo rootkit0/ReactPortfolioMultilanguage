@@ -24,12 +24,13 @@
         "title": "IoT",
         "desc": "Firmware, sensores, conectividad, plataforma y mantenimiento."
       }
-    }
+    },
+    "enableMotion": "Activar movimiento"
   },
   "home2": {
     "intro1": "ME PRESENTO",
     "intro2": "Soy Xavi, un ingeniero informático graduado en la Universidad de Lleida.",
-    "intro3": "A lo largo de mi formación y experiencia he adquirido un dominio sólido en diversos lenguajes de programación, entre ellos C/C++, Python, Java, TypeScript, JavaScript, X++ y .NET, lo que me permite adaptarme con facilidad a diferentes entornos y proyectos.",
+    "intro3": "A lo largo de mi formación y experiencia he adquirido un dominio sólido en diversos lenguajes de programación, entre ellos C/C++, Python, Java, TypeScript, JavaScript, X++, .NET y Solidity (entre otros), lo que me permite adaptarme con facilidad a diferentes entornos y proyectos.",
     "intro4": "Mis principales áreas de interés giran en torno al diseño y desarrollo de nuevos productos y tecnologías, especialmente en campos como la Inteligencia Artificial, los sistemas embebidos, el Internet of Things (IoT) y la tecnología Blockchain. Me motiva la innovación y la búsqueda de soluciones eficientes que aporten valor real a personas y organizaciones.",
     "intro5": "Además, aplico mi pasión por el desarrollo web creando aplicaciones modernas y escalables, así como APIs robustas, utilizando librerías y frameworks de vanguardia como Angular, React, ExpressJS y FastAPI (entre otros). Mi objetivo es construir soluciones fiables, seguras y fáciles de mantener que unan la tecnología con la experiencia de usuario.",
     "findmeon": "ENCUÉNTRAME TAMBIÉN AQUÍ",
