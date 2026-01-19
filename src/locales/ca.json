@@ -11,23 +11,24 @@
   },
   "home": {
     "salute": "Benvingut/da!",
-    "im": "Sóc el"
+    "im": "Sóc el",
+    "tagline": "Construeixo solucions amb tecnologies IoT i intel·ligència artificial amb focus en la qualitat, la seguretat i una experiència d’usuari neta."
   },
   "home2": {
     "intro1": "EM PRESENTO",
     "intro2": "Sóc en Xavi, un enginyer informàtic graduat a la Universitat de Lleida.",
     "intro3": "Al llarg de la meva formació i experiència he adquirit un domini sòlid en diversos llenguatges de programació, entre ells C/C++, Python, Java, TypeScript, JavaScript, X++ i .NET, cosa que em permet adaptar-me amb facilitat a diferents entorns i projectes.",
     "intro4": "Les meves principals àrees d’interès se centren en el disseny i desenvolupament de nous productes i tecnologies, especialment en camps com la Intel·ligència Artificial, els sistemes encastats, l’Internet of Things (IoT) i la tecnologia Blockchain. Em motiva la innovació i la recerca de solucions eficients que aportin un valor real a persones i organitzacions.",
-    "intro5": "A més, aplico la meva passió pel desenvolupament web creant aplicacions modernes i escalables, així com APIs robustes, utilitzant llibreries i frameworks d’avantguarda com Angular, React i ExpressJS. El meu objectiu és construir solucions fiables, segures i fàcils de mantenir que uneixin la tecnologia amb l’experiència d’usuari.",
+    "intro5": "A més, aplico la meva passió pel desenvolupament web creant aplicacions modernes i escalables, així com APIs robustes, utilitzant llibreries i frameworks d’avantguarda com Angular, React, ExpressJS i FastAPI (entre altres). El meu objectiu és construir solucions fiables, segures i fàcils de mantenir que uneixin la tecnologia amb l’experiència d’usuari.",
     "findmeon": "TROBA'M TAMBÉ AQUÍ",
     "connectme": "No dubtis a connectar amb mi"
   },
   "about": {
     "more": "Descobreix més sobre mi!",
-    "content1": "Sóc en Xavier Berga, un enginyer informàtic nascut i criat a Lleida (Catalunya) i ara mateix resident a Zaragoza (Espanya).",
-    "content2": "Actualment treballo com a desenvolupador de software especialitzat en Microsoft Dynamics 365 F&O a IFR, empresa del Grup Vall Companys, on contribueixo al desenvolupament i implementació de solucions que optimitzen processos empresarials.",
-    "content3": "A més de la meva feina per compte d’altri, dedico part del meu temps a projectes on poso en pràctica noves tecnologies i exploro idees innovadores. Alguns d’aquests projectes estan disponibles a la secció 'Projectes' d’aquest lloc web.",
-    "content4": "També sóc cofundador de dues empreses: una dedicada a l’aplicació de tecnologies IoT i Intel·ligència Artificial en el sector agrícola i una altra centrada en la monitorització de dades per a la bioseguretat en granges i en indústries químiques i alimentàries mitjançant tecnologies IoT.",
+    "content1": "Sóc en Xavier Berga, enginyer informàtic nascut i criat a Lleida (Catalunya) i actualment establert a Saragossa (Espanya).",
+    "content2": "Durant 5 anys vaig treballar com a desenvolupador de programari especialitzat en Microsoft Dynamics 365 Finance & Operations, participant en el desenvolupament i la implantació de solucions orientades a optimitzar processos empresarials i operatius.",
+    "content3": "Actualment treballo a AgroMind, empresa que vaig cofundar, on milloro el firmware i els sensors, valido prototips al camp i evoluciono la plataforma integrant models d’IA per transformar dades en decisions més intel·ligents en el sector agrícola i ramader.",
+    "content4": "A més, també treballo a InnovaOX, una empresa centrada en la monitorització de dades per reforçar la bioseguretat en granges i en indústries químiques i alimentàries mitjançant tecnologies IoT.",
     "content5": "Més enllà del món del codi i la tecnologia, tinc altres passions que m’acompanyen en el meu dia a dia i que m’inspiren a mantenir un equilibri creatiu i personal:",
     "skillset": "Habilitats professionals",
     "serverapps": "Aplicacions instal·lades al servidor",
@@ -41,15 +42,26 @@
     "cinema": "Veure sèries i pel·lícules interessants."
   },
   "typewriter": [
-    "Desenvolupador de Software",
+    "Desenvolupador de software",
     "Enginyer IoT",
-    "Expert en Blockchain",
-    "Entusiasta del Hardware",
-    "Col·laborador Open Source"
+    "Expert en blockchain",
+    "Entusiasta del hardware",
+    "Col·laborador open source"
   ],
   "projects": {
-    "recent": "Projectes Destacats",
+    "recent": "Projectes destacats",
     "recentDescription": "Una selecció dels projectes més rellevants en què he treballat recentment.",
+    "visit": "Veure més",
+    "groupPortfolio": "Portafoli",
+    "groupPortfolioDesc": "Portafoli personal.",
+    "groupPro": "Projectes professionals",
+    "groupProDesc": "Projectes desenvolupats per iniciatives i producte.",
+    "groupAi": "Automatització i IA",
+    "groupAiDesc": "Self-hosted, fluxos i eines d’IA.",
+    "groupIot": "Domòtica i IoT",
+    "groupIotDesc": "Automatització de la llar i missatgeria IoT.",
+    "groupInfra": "Infraestructura i privacitat",
+    "groupInfraDesc": "Serveis base de homelab orientats a privacitat.",
 
     "title1": "Portfoli Personal",
     "desc1": "El lloc web que estàs visitant ara mateix és el meu portfoli personal. Està desenvolupat amb React (Meta) i va ser el meu primer projecte amb aquest framework. A més de servir com a carta de presentació, també ha estat un laboratori d’aprenentatge on he experimentat amb noves tecnologies de frontend. Pots consultar-ne el codi a GitHub.",

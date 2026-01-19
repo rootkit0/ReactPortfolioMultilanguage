@@ -7,41 +7,51 @@ function Particle() {
       params={{
         particles: {
           number: {
-            value: 800,
+            value: 90,
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 900,
             },
           },
           line_linked: {
             enable: false,
-            opacity: 0.03,
           },
           move: {
-            direction: "right",
-            speed: 0.05,
+            enable: true,
+            direction: "none",
+            speed: 0.25,
+            out_mode: "out",
           },
           size: {
             value: 1,
           },
           opacity: {
+            value: 0.35,
+            random: true,
             anim: {
               enable: true,
-              speed: 1,
+              speed: 0.8,
               opacity_min: 0.05,
+              sync: false,
             },
           },
         },
         interactivity: {
           events: {
-            onclick: {
+            onhover: {
               enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: false,
               mode: "push",
             },
+            resize: true,
           },
           modes: {
-            push: {
-              particles_nb: 1,
+            repulse: {
+              distance: 90,
+              duration: 0.4,
             },
           },
         },

@@ -11,23 +11,24 @@
   },
   "home": {
     "salute": "¡Hola!",
-    "im": "Me llamo"
+    "im": "Me llamo",
+    "tagline": "Construyo soluciones usando tecnologías IoT e inteligencia artificial con foco en la calidad, la seguridad y una experiencia de usuario limpia."
   },
   "home2": {
     "intro1": "ME PRESENTO",
     "intro2": "Soy Xavi, un ingeniero informático graduado en la Universidad de Lleida.",
     "intro3": "A lo largo de mi formación y experiencia he adquirido un dominio sólido en diversos lenguajes de programación, entre ellos C/C++, Python, Java, TypeScript, JavaScript, X++ y .NET, lo que me permite adaptarme con facilidad a diferentes entornos y proyectos.",
     "intro4": "Mis principales áreas de interés giran en torno al diseño y desarrollo de nuevos productos y tecnologías, especialmente en campos como la Inteligencia Artificial, los sistemas embebidos, el Internet of Things (IoT) y la tecnología Blockchain. Me motiva la innovación y la búsqueda de soluciones eficientes que aporten valor real a personas y organizaciones.",
-    "intro5": "Además, aplico mi pasión por el desarrollo web creando aplicaciones modernas y escalables, así como APIs robustas, utilizando librerías y frameworks de vanguardia como Angular, React y ExpressJS. Mi objetivo es construir soluciones fiables, seguras y fáciles de mantener que unan la tecnología con la experiencia de usuario.",
+    "intro5": "Además, aplico mi pasión por el desarrollo web creando aplicaciones modernas y escalables, así como APIs robustas, utilizando librerías y frameworks de vanguardia como Angular, React, ExpressJS y FastAPI (entre otros). Mi objetivo es construir soluciones fiables, seguras y fáciles de mantener que unan la tecnología con la experiencia de usuario.",
     "findmeon": "ENCUÉNTRAME TAMBIÉN AQUÍ",
     "connectme": "No dudes en conectar conmigo"
   },
   "about": {
     "more": "¡Descubre más sobre mí!",
-    "content1": "Soy Xavier Berga, un ingeniero informático nacido y criado en Lleida (Catalunya) y ahora mismo residiendo en Zaragoza (España).",
-    "content2": "Actualmente trabajo como desarrollador de software especializado en Microsoft Dynamics 365 F&O en IFR, empresa perteneciente al Grupo Vall Companys, donde contribuyo al desarrollo e implementación de soluciones que optimizan procesos empresariales.",
-    "content3": "Además de mi trabajo por cuenta ajena, dedico parte de mi tiempo a proyectos en los que pongo en práctica nuevas tecnologías y exploro ideas innovadoras. Algunos de ellos están disponibles en la sección 'Proyectos' de este sitio web.",
-    "content4": "También soy cofundador de dos empresas: una de ellas dedicada a la aplicación de las tecnologías IoT e Inteligencia Artificial en el sector agrícola y otra centrada en la monitorización de datos para la bioseguridad en granjas e industrias químicas y alimentarias mediante tecnologías IoT.",
+    "content1": "Soy Xavier Berga, ingeniero informático nacido y criado en Lleida (Catalunya) y actualmente afincado en Zaragoza (España).",
+    "content2": "Durante 5 años trabajé como desarrollador de software especializado en Microsoft Dynamics 365 Finance & Operations, participando en el desarrollo e implantación de soluciones orientadas a optimizar procesos empresariales y operativos.",
+    "content3": "Actualmente trabajo en AgroMind, empresa que cofundé, donde mejoro el firmware y los sensores, valido prototipos en campo y evoluciono la plataforma integrando modelos de IA para transformar datos en decisiones más inteligentes en el sector agrícola y ganadero.",
+    "content4": "Además, trabajo también en InnovaOX, una empresa centrada en la monitorización de datos para reforzar la bioseguridad en granjas e industrias químicas y alimentarias mediante tecnologías IoT.",
     "content5": "Más allá del mundo del código y la tecnología, tengo otras pasiones que me acompañan en mi día a día y me inspiran a mantener un equilibrio creativo y personal:",
     "skillset": "Habilidades profesionales",
     "serverapps": "Aplicaciones instaladas en mi servidor",
@@ -41,15 +42,26 @@
     "cinema": "Ver series y películas interesantes."
   },
   "typewriter": [
-    "Desarrollador de Software",
+    "Desarrollador de software",
     "Ingeniero IoT",
-    "Experto en Blockchain",
-    "Entusiasta del Hardware",
-    "Colaborador Open Source"
+    "Experto en blockchain",
+    "Entusiasta del hardware",
+    "Colaborador open source"
   ],
   "projects": {
-    "recent": "Proyectos Destacados",
+    "recent": "Proyectos destacados",
     "recentDescription": "Una selección de los proyectos más relevantes en los que he trabajado recientemente.",
+    "visit": "Ver más",
+    "groupPortfolio": "Portafolio",
+    "groupPortfolioDesc": "Portafolio personal.",
+    "groupPro": "Proyectos profesionales",
+    "groupProDesc": "Proyectos desarrollados para iniciativas y producto.",
+    "groupAi": "Automatización e IA",
+    "groupAiDesc": "Self-hosted, flujos y herramientas de IA.",
+    "groupIot": "Domótica e IoT",
+    "groupIotDesc": "Automatización del hogar y mensajería IoT.",
+    "groupInfra": "Infraestructura y privacidad",
+    "groupInfraDesc": "Servicios base de homelab orientados a privacidad.",
 
     "title1": "Portafolio Personal",
     "desc1": "El sitio web que estás visitando ahora mismo es mi portafolio personal. Está desarrollado con React (Meta) y fue mi primer proyecto con este framework. Además de servir como carta de presentación, también ha sido un laboratorio de aprendizaje donde he experimentado con nuevas tecnologías de frontend. Puedes consultar el código en GitHub.",

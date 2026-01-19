@@ -1,47 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { AiFillStar } from "react-icons/ai";
+import { BsGithub } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import logo from "../assets/logos/logo.png";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "./languageSelector";
 
 function NavBar() {
-  const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [navColour, setNavColour] = useState(false);
   const { t } = useTranslation();
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    const onScroll = () => setNavColour(window.scrollY >= 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <Navbar
-      expanded={expand}
+      expanded={expanded}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navColour ? "sticky" : ""}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand
+          as={Link}
+          to="/"
+          className="d-flex"
+          onClick={() => setExpanded(false)}
+        >
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
-          >
+          onClick={() => setExpanded((prev) => !prev)}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -50,28 +50,40 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>{t("navbar.home")}</Nav.Link>
+              <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
+                {t("navbar.home")}
+              </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
-              <Nav.Link as={Link} to="/aboutme" onClick={() => updateExpanded(false)}>{t("navbar.about")}</Nav.Link>
+              <Nav.Link as={Link} to="/aboutme" onClick={() => setExpanded(false)}>
+                {t("navbar.about")}
+              </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
-              <Nav.Link as={Link} to="/projects" onClick={() => updateExpanded(false)}>{t("navbar.projects")}</Nav.Link>
+              <Nav.Link as={Link} to="/projects" onClick={() => setExpanded(false)}>
+                {t("navbar.projects")}
+              </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
-              <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>{t("navbar.resume")}</Nav.Link>
+              <Nav.Link as={Link} to="/resume" onClick={() => setExpanded(false)}>
+                {t("navbar.resume")}
+              </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="px-2 d-flex justify-content-center align-items-center gap-2" style={{ marginTop: "-10px" }}>
+
+            <Nav.Item className="px-2 d-flex justify-content-center align-items-center">
               <LanguageSelector />
             </Nav.Item>
-            <Nav.Item className="fork-btn">
+
+            <Nav.Item className="d-flex align-items-center">
               <Button
                 href="https://github.com/rootkit0"
                 target="_blank"
-                className="fork-btn-inner"
+                variant="outline-primary"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <BsGithub /> &nbsp; GitHub
               </Button>
             </Nav.Item>
           </Nav>

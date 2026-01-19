@@ -11,30 +11,31 @@
   },
   "home": {
     "salute": "Hi there!",
-    "im": "I'M"
+    "im": "I'M",
+    "tagline": "I build solutions using IoT and artificial intelligence technologies, focusing on quality, security, and a clean user experience."
   },
   "home2": {
     "intro1": "LET ME INTRODUCE MYSELF",
     "intro2": "I’m Xavi, a computer engineer graduated from the University of Lleida.",
     "intro3": "Throughout my education and professional experience, I have gained solid expertise in various programming languages, including C/C++, Python, Java, TypeScript, JavaScript, X++ and .NET, which allows me to easily adapt to different environments and projects.",
     "intro4": "My main areas of interest focus on the design and development of new products and technologies, particularly in fields such as Artificial Intelligence, embedded systems, the Internet of Things (IoT) and Blockchain technology. I’m highly motivated by innovation and the pursuit of efficient solutions that deliver real value to people and organizations.",
-    "intro5": "In addition, I apply my passion for web development by building modern and scalable applications, as well as robust APIs, using cutting-edge libraries and frameworks such as Angular, React and ExpressJS. My goal is to create reliable, secure, and easy-to-maintain solutions that bridge technology with user experience.",
+    "intro5": "In addition, I apply my passion for web development by building modern and scalable applications, as well as robust APIs, using cutting-edge libraries and frameworks such as Angular, React, ExpressJS and FastAPI (among others). My goal is to create reliable, secure, and easy-to-maintain solutions that bridge technology with user experience.",
     "findmeon": "FIND ME ON",
     "connectme": "Feel free to connect with me"
   },
   "typewriter": [
-    "Software Developer",
-    "IoT Engineer",
-    "Blockchain Expert",
-    "Hardware Enthusiast",
-    "Open Source Contributor"
+    "Software developer",
+    "IoT engineer",
+    "Blockchain expert",
+    "Hardware enthusiast",
+    "Open source contributor"
   ],
   "about": {
     "more": "Discover more about me!",
-    "content1": "I am Xavier Berga, a computer engineer born and raised in Lleida (Catalonia) and now living in Zaragoza (Spain).",
-    "content2": "I currently work as a software developer specialized in Microsoft Dynamics 365 F&O at IFR, a company that is part of the Vall Companys Group, where I contribute to the development and implementation of solutions that optimize business processes.",
-    "content3": "In addition to my full-time job, I dedicate part of my time to projects where I apply new technologies and explore innovative ideas. Some of them are available in the 'Projects' section of this website.",
-    "content4": "I am also the co-founder of two companies: one focused on the application of IoT and Artificial Intelligence technologies in the agricultural sector, and another dedicated to data monitoring for biosecurity in farms and in chemical and food industries using IoT technologies.",
+    "content1": "I’m Xavier Berga, a software engineer born and raised in Lleida (Catalonia) and currently based in Zaragoza (Spain).",
+    "content2": "For 5 years I worked as a software developer specialized in Microsoft Dynamics 365 Finance & Operations, contributing to the development and rollout of solutions aimed at optimizing business and operational processes.",
+    "content3": "I currently work at AgroMind, a company I co-founded, where I improve firmware and sensors, validate field prototypes, and evolve the platform by integrating AI models to turn data into smarter decisions for the agriculture and livestock sectors.",
+    "content4": "I also work at InnovaOX, a company focused on data monitoring to strengthen biosecurity in farms and in chemical and food industries through IoT technologies.",
     "content5": "Beyond the world of code and technology, I have other passions that inspire me every day and help me maintain a creative and personal balance:",
     "skillset": "Professional Skillset",
     "serverapps": "My Server Apps",
@@ -48,8 +49,19 @@
     "cinema": "Watching thought-provoking series and movies."
   },
   "projects": {
-    "recent": "Featured Projects",
+    "recent": "Featured projects",
     "recentDescription": "A selection of the most relevant projects I have worked on recently.",
+    "visit": "View more",
+    "groupPortfolio": "Portfolio",
+    "groupPortfolioDesc": "Personal portfolio.",
+    "groupPro": "Professional projects",
+    "groupProDesc": "Work and product-driven projects.",
+    "groupAi": "Automation & AI",
+    "groupAiDesc": "Self-hosted flows and AI tooling.",
+    "groupIot": "Smart home & IoT",
+    "groupIotDesc": "Home automation and IoT messaging.",
+    "groupInfra": "Infrastructure & privacy",
+    "groupInfraDesc": "Core homelab services focused on privacy.",
 
     "title1": "Personal Portfolio",
     "desc1": "The website you are visiting right now is my personal portfolio. It is built with React (Meta) and was my first project using this framework. Beyond being a presentation site, it has also been a learning lab where I experimented with new frontend technologies. You can check the code on GitHub.",

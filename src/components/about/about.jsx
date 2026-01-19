@@ -1,52 +1,59 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Particle from "../particle";
+
 import Github from "./github";
 import Techstack from "./techStack";
 import Aboutcard from "./aboutCard";
 import Toolstack from "./toolStack";
 import Serverstack from "./serverStack";
-import sensorImg from "../../assets/images/sensor.png";
-import platformImg from "../../assets/images/iot-cloud-platform.png";
 
 function About() {
   const { t } = useTranslation();
+
   return (
-    <Container fluid className="about-section">
-      <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}><b>{t("about.more")}</b></h1>
-            <Aboutcard />
-          </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={platformImg} alt="about" className="img-fluid" />
-          </Col>
-        </Row>
-        <h1 className="project-heading"><b>{t("about.skillset")}</b></h1>
-        <Techstack />
-
-        <h1 className="project-heading"><b>{t("about.serverapps")}</b></h1>
-        <Serverstack />
-
-        <h1 className="project-heading"><b>{t("about.tools")}</b></h1>
-        <Toolstack />
-
-        <Github />
+    <>
+      {/* DESCUBRE MAS SOBRE MI */}
+      <Container fluid className="section-block section-aboutme-more">
+        <Particle />
+        <Container className="section-inner">
+          <h2 className="section-title gradient-heading">{t("about.more")}</h2>
+          <Aboutcard />
+        </Container>
       </Container>
-    </Container>
+
+      {/* HABILIDADES PROFESIONALES */}
+      <Container fluid className="section-block section-aboutme-skillset">
+        <Container className="section-inner">
+          <h2 className="section-title gradient-heading">{t("about.skillset")}</h2>
+          <Techstack />
+        </Container>
+      </Container>
+
+      {/* APPS EN MI SERVIDOR */}
+      <Container fluid className="section-block section-aboutme-server">
+        <Container className="section-inner">
+          <h2 className="section-title gradient-heading">{t("about.serverapps")}</h2>
+          <Serverstack />
+        </Container>
+      </Container>
+
+      {/* SOFTWARE QUE UTILIZO */}
+      <Container fluid className="section-block section-aboutme-tools">
+        <Container className="section-inner">
+          <h2 className="section-title gradient-heading">{t("about.tools")}</h2>
+          <Toolstack />
+        </Container>
+      </Container>
+
+      {/* DIAS QUE SUBO CODIGO */}
+      <Container fluid className="section-block section-aboutme-code">
+        <Container className="section-inner">
+          <h2 className="section-title gradient-heading">{t("about.code")}</h2>
+          <Github />
+        </Container>
+      </Container>
+    </>
   );
 }
 
