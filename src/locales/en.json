@@ -117,7 +117,11 @@
     "title9": "Automation with n8n",
     "desc9": "n8n deployed on my own server to build automation workflows between multiple applications and services, without the need for coding. It allows API integration, data management, and process execution in a flexible and visual way. I also provide free credentials upon request for those who want to try it and experiment.",
     "src9": "https://github.com/n8n-io/n8n",
-    "demo9": "https://n8n.xavierberga.com"
+    "demo9": "https://n8n.xavierberga.com",
+
+    "title10": "TimeManager - Free time tracking",
+    "desc10": "TimeManager is a free, altruistic web app for time tracking and workday registration, designed for both companies and employees. It lets you clock in/out with one click, review shift history, request and manage vacations, and store work-related documents in an organized way. It was created in response to the legal obligation to track working hours and aims to offer a simple and accessible alternative with no costs or subscriptions.",
+    "demo10": "https://timemanager.es"
   },
   "resume": {
     "title": "Resume",

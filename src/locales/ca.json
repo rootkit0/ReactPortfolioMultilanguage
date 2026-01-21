@@ -118,7 +118,11 @@
     "title9": "Automatització amb n8n",
     "desc9": "n8n desplegat en servidor propi per crear fluxos d’automatització entre múltiples aplicacions i serveis, sense necessitat de programar. Permet integrar APIs, gestionar dades i executar processos de manera flexible i visual. També ofereixo credencials gratuïtes sota petició per a qui vulgui provar-lo i experimentar.",
     "src9": "https://github.com/n8n-io/n8n",
-    "demo9": "https://n8n.xavierberga.com"
+    "demo9": "https://n8n.xavierberga.com",
+
+    "title10": "TimeManager - Control horari gratis",
+    "desc10": "TimeManager és una aplicació web gratuïta i altruista per al registre de jornada i el control horari, pensada tant per a empreses com per a treballadors. Permet fitxar entrada/sortida amb un sol clic, consultar l’historial de torns, sol·licitar i gestionar vacances, i emmagatzemar documentació laboral de manera organitzada. Neix com a resposta a l’obligació de registrar la jornada i busca oferir una alternativa senzilla i accessible sense costos ni subscripcions.",
+    "demo10": "https://timemanager.es"
   },
   "resume": {
     "title": "Currículum",

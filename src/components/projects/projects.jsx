@@ -11,6 +11,7 @@ import homeassistant from "../../assets/logos/home-assistant-logo.png";
 import adguard from "../../assets/logos/adguard-logo.png";
 import mqtt from "../../assets/logos/mqtt-logo.png";
 import n8n from "../../assets/logos/n8n-logo.png";
+import timemanager from "../../assets/logos/timemanager-logo.png";
 
 function Projects() {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ function Projects() {
         </Container>
         <Container className="section-inner">
           <Row style={{ justifyContent: "center" }}>
-            <Col xs={12} md={10} lg={8} xl={7} className="project-card">
+            <Col xs={12} md={6} lg={6} xl={5} className="project-card">
               <ProjectCard
                 imgPath={logo}
                 openSource={true}
@@ -35,6 +36,17 @@ function Projects() {
                 description={t("projects.desc1")}
                 srcLink={t("projects.src1")}
                 demoLink={t("projects.demo1")}
+                demoText={demoText}
+              />
+            </Col>
+            <Col xs={12} md={6} lg={6} xl={5} className="project-card">
+              <ProjectCard
+                imgPath={timemanager}
+                openSource={false}
+                title={t("projects.title10")}
+                description={t("projects.desc10")}
+                srcLink={t("projects.src10")}
+                demoLink={t("projects.demo10")}
                 demoText={demoText}
               />
             </Col>
