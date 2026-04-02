@@ -1,0 +1,7 @@
+---
+import AILanding from '@/components/AILanding.astro';
+import { resolveLang, t } from '@/i18n';
+const lang = resolveLang(Astro.request);
+const city = t(lang, 'cities.lleida') || 'Lleida';
+---
+<AILanding lang={lang} city={city} slug="lleida" />

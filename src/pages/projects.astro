@@ -1,0 +1,115 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import { resolveLang, t } from '@/i18n';
+
+import logo from '@/assets/logos/logo.png';
+import alimentando from '@/assets/logos/alimentando-logo.png';
+import agromind from '@/assets/logos/agromind-logo.png';
+import openwebui from '@/assets/logos/openwebui-logo.png';
+import nextcloud from '@/assets/logos/nextcloud-logo.png';
+import homeassistant from '@/assets/logos/home-assistant-logo.png';
+import adguard from '@/assets/logos/adguard-logo.png';
+import mqtt from '@/assets/logos/mqtt-logo.png';
+import n8n from '@/assets/logos/n8n-logo.png';
+import timemanager from '@/assets/logos/timemanager-logo.png';
+
+const lang = resolveLang(Astro.request);
+const title = `${t(lang, 'projects.recent')} | Xavier Berga`;
+const description = t(lang, 'projects.recentDescription');
+const visitText = t(lang, 'projects.visit');
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": t(lang, 'projects.recent'),
+  "description": description,
+  "url": "https://www.xavierberga.com/projects",
+  "author": { "@id": "https://www.xavierberga.com/#person" }
+};
+---
+<BaseLayout lang={lang} title={title} description={description} canonical="https://www.xavierberga.com/projects" jsonLd={jsonLd}>
+
+  <!-- HERO -->
+  <section class="section-block section-projects-hero">
+    <div class="container section-inner">
+      <h1 class="section-title gradient-heading"><b>{t(lang, 'projects.recent')}</b></h1>
+      <p class="project-subheading">{t(lang, 'projects.recentDescription')}</p>
+    </div>
+    <div class="container section-inner">
+      <div class="row" style="justify-content:center">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={logo.src} imgAlt={t(lang, 'projects.title1')} title={t(lang, 'projects.title1')} description={t(lang, 'projects.desc1')} srcLink="https://github.com/rootkit0" demoLink="https://xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={timemanager.src} imgAlt={t(lang, 'projects.title10')} title={t(lang, 'projects.title10')} description={t(lang, 'projects.desc10')} demoLink="https://timemanager.es" visitText={visitText} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO -->
+  <section class="section-block section-projects-pro">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'projects.groupPro')}</h2>
+      <p class="section-subtitle">{t(lang, 'projects.groupProDesc')}</p>
+      <div class="row" style="justify-content:center">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={alimentando.src} imgAlt={t(lang, 'projects.title2')} title={t(lang, 'projects.title2')} description={t(lang, 'projects.desc2')} demoLink="https://alimentandoconciencia.com" visitText={visitText} openSource={true} />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={agromind.src} imgAlt={t(lang, 'projects.title3')} title={t(lang, 'projects.title3')} description={t(lang, 'projects.desc3')} demoLink="https://agromind.es" visitText={visitText} openSource={true} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section class="section-block section-projects-ai">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'projects.groupAi')}</h2>
+      <p class="section-subtitle">{t(lang, 'projects.groupAiDesc')}</p>
+      <div class="row" style="justify-content:center">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={openwebui.src} imgAlt={t(lang, 'projects.title4')} title={t(lang, 'projects.title4')} description={t(lang, 'projects.desc4')} srcLink="https://github.com/open-webui/open-webui" demoLink="https://ia.xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={n8n.src} imgAlt={t(lang, 'projects.title9')} title={t(lang, 'projects.title9')} description={t(lang, 'projects.desc9')} srcLink="https://github.com/n8n-io/n8n" demoLink="https://n8n.xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IoT -->
+  <section class="section-block section-projects-iot">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'projects.groupIot')}</h2>
+      <p class="section-subtitle">{t(lang, 'projects.groupIotDesc')}</p>
+      <div class="row" style="justify-content:center">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={homeassistant.src} imgAlt={t(lang, 'projects.title6')} title={t(lang, 'projects.title6')} description={t(lang, 'projects.desc6')} srcLink="https://github.com/home-assistant" demoLink="https://home.xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={mqtt.src} imgAlt={t(lang, 'projects.title8')} title={t(lang, 'projects.title8')} description={t(lang, 'projects.desc8')} srcLink="https://github.com/eclipse-mosquitto/mosquitto" demoLink="mqtt://mqtt.xavierberga.com" visitText={visitText} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRA -->
+  <section class="section-block section-projects-infra">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'projects.groupInfra')}</h2>
+      <p class="section-subtitle">{t(lang, 'projects.groupInfraDesc')}</p>
+      <div class="row" style="justify-content:center">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={nextcloud.src} imgAlt={t(lang, 'projects.title5')} title={t(lang, 'projects.title5')} description={t(lang, 'projects.desc5')} srcLink="https://github.com/nextcloud" demoLink="https://nextcloud.xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+          <ProjectCard imgSrc={adguard.src} imgAlt={t(lang, 'projects.title7')} title={t(lang, 'projects.title7')} description={t(lang, 'projects.desc7')} srcLink="https://github.com/AdguardTeam/AdGuardHome" demoLink="https://adguard.xavierberga.com" visitText={visitText} openSource={true} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

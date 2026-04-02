@@ -1,0 +1,7 @@
+---
+import IoTLanding from '@/components/IoTLanding.astro';
+import { resolveLang, t } from '@/i18n';
+const lang = resolveLang(Astro.request);
+const city = t(lang, 'cities.barcelona') || 'Barcelona';
+---
+<IoTLanding lang={lang} city={city} slug="barcelona" />

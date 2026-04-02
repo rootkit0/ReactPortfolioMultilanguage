@@ -1,0 +1,25 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  links: { href: string; label: string }[];
+}
+const { icon, title, description, links } = Astro.props;
+---
+<div class="service-card">
+  <div class="service-card-head">
+    <div class="service-badge" aria-hidden="true">
+      <Fragment set:html={icon} />
+    </div>
+    <div>
+      <h3 class="service-title">{title}</h3>
+      <p class="service-text">{description}</p>
+    </div>
+  </div>
+  <div class="service-links">
+    {links.map(l => (
+      <a class="service-link" href={l.href}>{l.label}</a>
+    ))}
+  </div>
+</div>

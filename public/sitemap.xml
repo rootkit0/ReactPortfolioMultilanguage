@@ -1,71 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://www.xavierberga.com/</loc>
-    <lastmod>2026-01-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/?lang=ca" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.xavierberga.com/aboutme</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.xavierberga.com/projects</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.xavierberga.com/resume</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Landings IA -->
   <url>
     <loc>https://www.xavierberga.com/ia-zaragoza</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-barcelona</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-lleida</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-madrid</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Landings IoT -->
   <url>
     <loc>https://www.xavierberga.com/iot-zaragoza</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-barcelona</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-lleida</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-madrid</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 

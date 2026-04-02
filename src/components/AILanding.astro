@@ -1,0 +1,140 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingForm from '@/components/LandingForm.astro';
+import type { Lang } from '@/i18n';
+import { t } from '@/i18n';
+
+interface Props {
+  lang: Lang;
+  city: string;
+  slug: string;
+}
+
+const { lang, city, slug } = Astro.props;
+const PHONE = '34644369266';
+const EMAIL = 'xavier@agromind.es';
+const LINKEDIN = 'https://www.linkedin.com/in/xavierberga/';
+
+const pageTitle = `${t(lang, 'landingAI.metaTitle')}${city} | Xavier Berga`;
+const description = t(lang, 'landingAI.heroLead');
+const canonical = `https://www.xavierberga.com/ia-${slug}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `${t(lang, 'landingAI.form.serviceName')} - ${city}`,
+  "description": description,
+  "url": canonical,
+  "provider": { "@id": "https://www.xavierberga.com/#person" },
+  "areaServed": { "@type": "City", "name": city },
+  "serviceType": t(lang, 'landingAI.form.serviceName')
+};
+
+const aiCards = [
+  { key: 'c1', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>' },
+  { key: 'c2', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>' },
+  { key: 'c3', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>' },
+  { key: 'c4', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>' },
+  { key: 'c5', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>' },
+  { key: 'c6', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>' },
+];
+---
+<BaseLayout lang={lang} title={pageTitle} description={description} canonical={canonical} jsonLd={jsonLd}>
+
+  <!-- HERO -->
+  <section class="section-block section-landing-hero section-landing-ai">
+    <div class="container section-inner">
+      <p class="landing-kicker">{t(lang, 'landing.common.kicker')}{city} {t(lang, 'landing.common.kicker2')}</p>
+      <h1 class="landing-title gradient-heading">{t(lang, 'landingAI.heroTitle')}</h1>
+      <p class="landing-lead">{t(lang, 'landingAI.heroLead')}</p>
+      <div class="landing-cta">
+        <a href={`https://wa.me/${PHONE}`} target="_blank" rel="noopener noreferrer" class="btn btn-primary cta-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          &nbsp; {t(lang, 'landing.common.ctaWhatsApp')}
+        </a>
+        <a href={`mailto:${EMAIL}`} class="btn btn-outline-primary cta-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          &nbsp; {t(lang, 'landing.common.ctaEmail')}
+        </a>
+        <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary cta-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 01107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.97 0 111.28 61.9 111.28 142.3V448z"/></svg>
+          &nbsp; LinkedIn
+        </a>
+      </div>
+      <div class="landing-proof">
+        <span>{t(lang, 'landingAI.proof1')}</span><span>•</span>
+        <span>{t(lang, 'landingAI.proof2')}</span><span>•</span>
+        <span>{t(lang, 'landingAI.proof3')}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="section-block section-landing-alt">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'landingAI.helpTitle')}</h2>
+      <div class="row g-4 justify-content-center">
+        {aiCards.map(({ key, icon }) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="landing-card landing-card-icon">
+              <div class="landing-card-badge" aria-hidden="true"><Fragment set:html={icon} /></div>
+              <h3 class="landing-card-title">{t(lang, `landingAI.cards.${key}.title`)}</h3>
+              <p class="landing-card-text">{t(lang, `landingAI.cards.${key}.text`)}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="section-block section-landing-white">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'landing.common.howTitle')}</h2>
+      <div class="row g-4 justify-content-center">
+        {['s1','s2','s3','s4'].map((k, idx) => (
+          <div class="col-md-6 col-lg-3">
+            <div class="landing-step">
+              <div class="landing-step-num">{idx + 1}</div>
+              <h3 class="landing-step-title">{t(lang, `landing.common.steps.${k}.title`)}</h3>
+              <p class="landing-step-text">{t(lang, `landing.common.steps.${k}.text`)}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="section-block section-landing-alt">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{t(lang, 'landing.common.formTitle')}</h2>
+      <p class="landing-lead" style="max-width:72ch;margin:0 auto 16px">{t(lang, 'landing.common.formLead')}</p>
+      <LandingForm
+        phone={PHONE}
+        email={EMAIL}
+        serviceLabel={t(lang, 'landingAI.form.serviceName')}
+        city={city}
+        slug={`ia-${slug}`}
+        emailSubject={`${t(lang, 'landingAI.form.emailSubject')} - ${city}`}
+        labels={{
+          formTitle: t(lang, 'landing.common.formTitle'),
+          formLead: t(lang, 'landing.common.formLead'),
+          name: t(lang, 'landing.common.name'),
+          company: t(lang, 'landing.common.company'),
+          emailLabel: t(lang, 'landing.common.email'),
+          message: t(lang, 'landing.common.message'),
+          namePh: t(lang, 'landing.common.namePh'),
+          companyPh: t(lang, 'landing.common.companyPh'),
+          emailPh: t(lang, 'landing.common.emailPh'),
+          messagePh: t(lang, 'landingAI.form.messagePh'),
+          sendWhatsApp: t(lang, 'landing.common.sendWhatsApp'),
+          sendEmail: t(lang, 'landing.common.sendEmail'),
+          service: t(lang, 'landing.common.service'),
+          source: t(lang, 'landing.common.source'),
+        }}
+      />
+    </div>
+  </section>
+
+</BaseLayout>
