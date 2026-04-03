@@ -1,15 +1,31 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { resolveLang } from '@/i18n';
+
 const lang = resolveLang(Astro.request);
 Astro.response.status = 404;
 ---
-<BaseLayout lang={lang} title="404 - Página no encontrada | Xavier Berga" description="La página que buscas no existe.">
+<BaseLayout lang={lang} title="404 | Xavier Berga" description="Page not found." noindex={true}>
   <section class="section-block section-hero" style="padding-top:160px;padding-bottom:120px;">
     <div class="container section-inner text-center">
-      <h1 class="section-title gradient-heading" style="font-size:4rem;">404</h1>
-      <p class="section-subtitle" style="font-size:1.2rem;margin-bottom:24px;">La página que buscas no existe o ha sido movida.</p>
-      <a href="/" class="btn btn-primary cta-btn">Volver al inicio</a>
+      <p class="section-kicker">404</p>
+      <h1 class="section-title gradient-heading">{
+        lang === 'es'
+          ? 'Pagina no encontrada'
+          : lang === 'ca'
+            ? 'Pagina no trobada'
+            : 'Page not found'
+      }</h1>
+      <p class="section-subtitle" style="font-size:1.1rem;margin-bottom:24px;">{
+        lang === 'es'
+          ? 'La URL que buscas no existe o ha cambiado.'
+          : lang === 'ca'
+            ? 'La URL que busques no existeix o ha canviat.'
+            : 'The URL you requested does not exist or has changed.'
+      }</p>
+      <a href={lang === 'es' ? '/' : `/${lang}`} class="btn btn-primary cta-btn">{
+        lang === 'es' ? 'Volver al inicio' : lang === 'ca' ? 'Tornar a l inici' : 'Back home'
+      }</a>
     </div>
   </section>
 </BaseLayout>

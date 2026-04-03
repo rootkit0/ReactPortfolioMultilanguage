@@ -79,7 +79,7 @@
     "groupInfraDesc": "Serveis base de homelab orientats a privacitat.",
 
     "title1": "Portfoli Personal",
-    "desc1": "El lloc web que estàs visitant ara mateix és el meu portfoli personal. Està desenvolupat amb React (Meta) i va ser el meu primer projecte amb aquest framework. A més de servir com a carta de presentació, també ha estat un laboratori d’aprenentatge on he experimentat amb noves tecnologies de frontend. Pots consultar-ne el codi a GitHub.",
+    "desc1": "El lloc web que estàs visitant ara mateix és el meu portfoli personal. Està desenvolupat amb Astro i prioritza HTML semàntic, rendiment, estructura clara i millor SEO. A més de servir com a carta de presentació, també funciona com a laboratori d’arquitectura frontend i contingut orientat a captació.",
     "src1": "https://github.com/rootkit0",
     "demo1": "https://xavierberga.com",
 

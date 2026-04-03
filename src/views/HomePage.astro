@@ -1,0 +1,220 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import { absoluteUrl, localePath, t, type Lang } from '@/i18n';
+import { contact } from '@/data/contact';
+import { featuredCases, homeFocusAreas, homeHero, homeProofs } from '@/data/homeContent';
+
+import homeImg from '@/assets/images/home-main.png';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const titleMap: Record<Lang, string> = {
+  es: 'Ingeniero IA e IoT en Zaragoza | Xavier Berga',
+  ca: 'Enginyer IA i IoT a Saragossa | Xavier Berga',
+  en: 'AI and IoT Engineer in Zaragoza | Xavier Berga',
+};
+
+const description = homeHero.lead[lang];
+const canonical = absoluteUrl(localePath(lang, '/'));
+
+const iconAI = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`;
+const iconIoT = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>`;
+const cities = ['zaragoza', 'barcelona', 'lleida', 'madrid'];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${canonical}#website`,
+      url: canonical,
+      name: 'Xavier Berga',
+      inLanguage: lang === 'es' ? 'es-ES' : lang,
+    },
+    {
+      '@type': 'Person',
+      '@id': `${absoluteUrl('/')}#person`,
+      name: 'Xavier Berga',
+      url: canonical,
+      jobTitle: titleMap[lang],
+      telephone: contact.phoneDisplay,
+      email: contact.email,
+      sameAs: [contact.linkedin, contact.github],
+      knowsAbout: [
+        'Artificial Intelligence',
+        'IoT',
+        'Firmware',
+        'Sensors',
+        'Automation',
+        'Data platforms',
+      ],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${canonical}#service`,
+      name: titleMap[lang],
+      url: canonical,
+      description,
+      areaServed: ['Zaragoza', 'Barcelona', 'Lleida', 'Madrid'],
+      provider: { '@id': `${absoluteUrl('/')}#person` },
+      serviceType: ['Artificial Intelligence', 'IoT', 'Automation', 'Firmware', 'Integration'],
+    },
+  ],
+};
+---
+<BaseLayout lang={lang} title={titleMap[lang]} description={description} canonical={canonical} jsonLd={jsonLd}>
+  <section class="section-block section-hero section-home-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="section-kicker">{homeHero.kicker[lang]}</p>
+        <h1 class="hero-title-xl">{homeHero.title[lang]}</h1>
+        <p class="hero-lead">{homeHero.lead[lang]}</p>
+
+        <div class="hero-cta hero-cta-start">
+          <a href={localePath(lang, '/inteligencia-artificial')} class="btn btn-primary cta-btn">{homeHero.primaryCta[lang]}</a>
+          <a href={localePath(lang, '/iot')} class="btn btn-outline-primary cta-btn">{homeHero.secondaryCta[lang]}</a>
+          <a href={localePath(lang, '/projects')} class="btn btn-ghost cta-btn">{homeHero.tertiaryCta[lang]}</a>
+        </div>
+
+        <ul class="proof-list">
+          {homeProofs[lang].map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+
+        <div class="contact-inline">
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <span>•</span>
+          <a href={`https://wa.me/${contact.phone}`}>{contact.phoneDisplay}</a>
+          <span>•</span>
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-portrait-card">
+          <img src={homeImg.src} alt="Xavier Berga" class="img-fluid hero-image" width="520" height="520" loading="eager" fetchpriority="high" />
+          <div class="hero-badge-stack">
+            <span class="floating-chip">Firmware + Data + UX</span>
+            <span class="floating-chip">AI and IoT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-surface">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es'
+          ? 'Como suelo aportar valor'
+          : lang === 'ca'
+            ? 'Com acostumo a aportar valor'
+            : 'How I usually create value'
+      }</h2>
+      <div class="row g-4 justify-content-center">
+        {homeFocusAreas[lang].map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <article class="insight-card">
+              <h3 class="insight-title">{item.title}</h3>
+              <p class="insight-text">{item.text}</p>
+            </article>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-home-cases">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es'
+          ? 'Casos y proyectos que explican mejor mi trabajo'
+          : lang === 'ca'
+            ? 'Casos i projectes que expliquen millor la meva feina'
+            : 'Cases and projects that explain my work best'
+      }</h2>
+      <div class="row g-4 justify-content-center">
+        {featuredCases.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <article class="case-card">
+              <span class="case-tag">{item.category[lang]}</span>
+              <h3 class="case-title">{item.title[lang]}</h3>
+              <p class="case-text">{item.summary[lang]}</p>
+              <a href={item.href} target="_blank" rel="noopener noreferrer" class="case-link">
+                {item.cta[lang]}
+              </a>
+            </article>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-services" id="services">
+    <div class="container section-inner">
+      <h2 class="section-title">{t(lang, 'home.services.title')}</h2>
+      <p class="section-subtitle">{
+        lang === 'es'
+          ? 'Dos areas principales, con hubs dedicados y paginas locales para mejorar el encaje con cada tipo de proyecto.'
+          : lang === 'ca'
+            ? 'Dues arees principals, amb hubs dedicats i pagines locals per millorar l encaix amb cada tipus de projecte.'
+            : 'Two main areas, each with dedicated hubs and local pages to make the offer fit the project context better.'
+      }</p>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <ServiceCard
+            icon={iconAI}
+            title={t(lang, 'home.services.ai.title')}
+            description={t(lang, 'home.services.ai.desc')}
+            links={[
+              { href: localePath(lang, '/inteligencia-artificial'), label: lang === 'en' ? 'AI hub' : lang === 'ca' ? 'Hub IA' : 'Hub IA' },
+              ...cities.map((city) => ({ href: localePath(lang, `/ia-${city}`), label: t(lang, `cities.${city}`) })),
+            ]}
+          />
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <ServiceCard
+            icon={iconIoT}
+            title={t(lang, 'home.services.iot.title')}
+            description={t(lang, 'home.services.iot.desc')}
+            links={[
+              { href: localePath(lang, '/iot'), label: lang === 'en' ? 'IoT hub' : lang === 'ca' ? 'Hub IoT' : 'Hub IoT' },
+              ...cities.map((city) => ({ href: localePath(lang, `/iot-${city}`), label: t(lang, `cities.${city}`) })),
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-cta-band">
+    <div class="container cta-band">
+      <div>
+        <p class="section-kicker">{
+          lang === 'es'
+            ? 'Trabajo desde Zaragoza y en remoto'
+            : lang === 'ca'
+              ? 'Treballo des de Saragossa i en remot'
+              : 'Working from Zaragoza and remotely'
+        }</p>
+        <h2 class="cta-band-title">{
+          lang === 'es'
+            ? 'Si tienes una idea, una PoC o un sistema que necesita orden tecnico, hablemos.'
+            : lang === 'ca'
+              ? 'Si tens una idea, una PoC o un sistema que necessita ordre tecnic, en parlem.'
+              : 'If you have an idea, a PoC, or a system that needs technical direction, let us talk.'
+        }</h2>
+      </div>
+      <div class="cta-band-actions">
+        <a href={`mailto:${contact.email}`} class="btn btn-primary cta-btn">Email</a>
+        <a href={`https://wa.me/${contact.phone}`} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary cta-btn">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

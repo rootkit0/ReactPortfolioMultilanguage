@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { absoluteUrl, localePath, type Lang } from '@/i18n';
+import { contact } from '@/data/contact';
+import { aboutStory } from '@/data/aboutContent';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const canonical = absoluteUrl(localePath(lang, '/aboutme'));
+const title = `${aboutStory[lang].title} | Xavier Berga`;
+const description = aboutStory[lang].lead;
+const content = aboutStory[lang];
+const fitLabels: Record<Lang, string[]> = {
+  es: ['IA aplicada a operaciones', 'Firmware y sensado', 'Automatizacion y APIs', 'Producto tecnico'],
+  ca: ['IA aplicada a operacions', 'Firmware i sensat', 'Automatitzacio i APIs', 'Producte tecnic'],
+  en: ['Applied AI for operations', 'Firmware and sensing', 'Automation and APIs', 'Technical product work'],
+};
+---
+<BaseLayout lang={lang} title={title} description={description} canonical={canonical}>
+  <section class="section-block section-about-hero">
+    <div class="container section-inner about-hero-grid">
+      <div class="about-hero-copy">
+        <p class="section-kicker">{
+          lang === 'es' ? 'Perfil tecnico con orientacion a producto' : lang === 'ca' ? 'Perfil tecnic amb orientacio a producte' : 'Technical profile with a product mindset'
+        }</p>
+        <h1 class="section-title gradient-heading">{content.title}</h1>
+        <p class="hero-lead">{content.lead}</p>
+      </div>
+      <aside class="about-side-card">
+        <h2 class="side-card-title">{
+          lang === 'es' ? 'Donde encajo mejor' : lang === 'ca' ? 'On encaixo millor' : 'Where I fit best'
+        }</h2>
+        <ul class="side-card-list">
+          {fitLabels[lang].map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+        <div class="contact-inline contact-inline-column">
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-block section-about-timeline">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Recorrido' : lang === 'ca' ? 'Recorregut' : 'Path'
+      }</h2>
+      <div class="timeline-list">
+        {content.timeline.map((item, index) => (
+          <article class="timeline-card">
+            <span class="timeline-index">{index + 1}</span>
+            <div>
+              <h3 class="timeline-title">{item.title}</h3>
+              <p class="timeline-text">{item.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-about-principles">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Como trabajo' : lang === 'ca' ? 'Com treballo' : 'How I work'
+      }</h2>
+      <div class="row g-4 justify-content-center">
+        {content.principles.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <article class="insight-card">
+              <h3 class="insight-title">{item.title}</h3>
+              <p class="insight-text">{item.text}</p>
+            </article>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-about-hobbies">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Fuera del codigo' : lang === 'ca' ? 'Fora del codi' : 'Outside code'
+      }</h2>
+      <div class="sector-pills">
+        {content.hobbies.map((item) => (
+          <span class="sector-pill">{item}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

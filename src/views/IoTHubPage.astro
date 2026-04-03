@@ -1,0 +1,120 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { absoluteUrl, localePath, t, type Lang } from '@/i18n';
+import { contact } from '@/data/contact';
+import { hubIntro } from '@/data/serviceHubs';
+import { iotCities } from '@/data/iotCities';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const canonical = absoluteUrl(localePath(lang, '/iot'));
+const titleMap: Record<Lang, string> = {
+  es: 'Servicios IoT | Xavier Berga',
+  ca: 'Serveis IoT | Xavier Berga',
+  en: 'IoT Services | Xavier Berga',
+};
+const description = hubIntro.iot.lead[lang];
+const cityKeys = ['zaragoza', 'barcelona', 'lleida', 'madrid'] as const;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: titleMap[lang],
+  description,
+  url: canonical,
+  areaServed: cityKeys.map((city) => t(lang, `cities.${city}`)),
+  provider: { '@id': `${absoluteUrl('/')}#person` },
+  serviceType: 'IoT',
+};
+---
+<BaseLayout lang={lang} title={titleMap[lang]} description={description} canonical={canonical} jsonLd={jsonLd}>
+  <section class="section-block section-landing-hero section-landing-iot">
+    <div class="container section-inner">
+      <p class="section-kicker">Sensors / firmware / gateways / telemetry</p>
+      <h1 class="landing-title gradient-heading">{hubIntro.iot.title[lang]}</h1>
+      <p class="landing-lead hub-lead">{hubIntro.iot.lead[lang]}</p>
+      <div class="landing-cta">
+        <a href={`mailto:${contact.email}`} class="btn btn-primary cta-btn">Email</a>
+        <a href={`https://wa.me/${contact.phone}`} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary cta-btn">WhatsApp</a>
+        <a href={localePath(lang, '/projects')} class="btn btn-ghost cta-btn">{
+          lang === 'es' ? 'Ver proyectos' : lang === 'ca' ? 'Veure projectes' : 'See projects'
+        }</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-landing-white">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{hubIntro.iot.deliverablesTitle[lang]}</h2>
+      <div class="row g-4 justify-content-center">
+        {hubIntro.iot.deliverables[lang].map((item) => (
+          <div class="col-md-6 col-lg-3">
+            <article class="landing-step">
+              <div class="landing-step-num">IoT</div>
+              <p class="landing-step-text">{item}</p>
+            </article>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-landing-alt">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{hubIntro.iot.sectorsTitle[lang]}</h2>
+      <div class="sector-pills">
+        {hubIntro.iot.sectors[lang].map((item) => (
+          <span class="sector-pill">{item}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-landing-white">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es'
+          ? 'Paginas locales con foco sectorial'
+          : lang === 'ca'
+            ? 'Pagines locals amb focus sectorial'
+            : 'Local pages with stronger sector focus'
+      }</h2>
+      <div class="row g-4 justify-content-center">
+        {cityKeys.map((city) => (
+          <div class="col-md-6 col-lg-3">
+            <article class="city-card">
+              <h3 class="city-card-title">{t(lang, `cities.${city}`)}</h3>
+              <p class="city-card-text">{iotCities[city].intro[lang]}</p>
+              <a href={localePath(lang, `/iot-${city}`)} class="city-card-link">{
+                lang === 'es'
+                  ? `Ver IoT en ${t(lang, `cities.${city}`)}`
+                  : lang === 'ca'
+                    ? `Veure IoT a ${t(lang, `cities.${city}`)}`
+                    : `See IoT in ${t(lang, `cities.${city}`)}`
+              }</a>
+            </article>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-landing-alt">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Preguntas frecuentes' : lang === 'ca' ? 'Preguntes frequents' : 'Frequently asked questions'
+      }</h2>
+      <div class="faq-list">
+        {hubIntro.iot.faq[lang].map((item) => (
+          <article class="faq-card">
+            <h3 class="faq-question">{item.question}</h3>
+            <p class="faq-answer">{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

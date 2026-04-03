@@ -77,7 +77,7 @@
     "groupInfraDesc": "Core homelab services focused on privacy.",
 
     "title1": "Personal Portfolio",
-    "desc1": "The website you are visiting right now is my personal portfolio. It is built with React (Meta) and was my first project using this framework. Beyond being a presentation site, it has also been a learning lab where I experimented with new frontend technologies. You can check the code on GitHub.",
+    "desc1": "The website you are visiting right now is my personal portfolio. It is built with Astro and prioritizes semantic HTML, performance, clear structure, and stronger SEO. Beyond being a presentation site, it also acts as a lab for frontend architecture and service-oriented content.",
     "src1": "https://github.com/rootkit0",
     "demo1": "https://xavierberga.com",
 
@@ -112,7 +112,7 @@
     "title8": "MQTT Broker for IoT",
     "desc8": "Eclipse Mosquitto deployed as a lightweight MQTT messaging broker to coordinate communication between the different devices in my IoT ecosystem. Thanks to this service, all devices exchange data quickly and reliably. I also provide free access for development environments upon request, for those who want to experiment.",
     "src8": "https://github.com/eclipse-mosquitto/mosquitto",
-    "demo8": "mqtt://mqtt.xavierberga.com",
+    "demo8": "https://mqtt.xavierberga.com",
 
     "title9": "Automation with n8n",
     "desc9": "n8n deployed on my own server to build automation workflows between multiple applications and services, without the need for coding. It allows API integration, data management, and process execution in a flexible and visual way. I also provide free credentials upon request for those who want to try it and experiment.",

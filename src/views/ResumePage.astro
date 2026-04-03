@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { absoluteUrl, localePath, type Lang } from '@/i18n';
+import { contact } from '@/data/contact';
+import { resumeContent } from '@/data/resumeContent';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const content = resumeContent[lang];
+const canonical = absoluteUrl(localePath(lang, '/resume'));
+---
+<BaseLayout lang={lang} title={`${content.title} | Xavier Berga`} description={content.lead} canonical={canonical}>
+  <section class="section-block section-resume-top">
+    <div class="container section-inner text-center">
+      <p class="section-kicker">{
+        lang === 'es'
+          ? 'Experiencia actual y foco tecnico'
+          : lang === 'ca'
+            ? 'Experiencia actual i focus tecnic'
+            : 'Current experience and technical focus'
+      }</p>
+      <h1 class="section-title gradient-heading">{content.title}</h1>
+      <p class="section-subtitle resume-lead">{content.lead}</p>
+    </div>
+  </section>
+
+  <section class="section-block section-resume-doc">
+    <div class="container section-inner resume-grid">
+      <div class="resume-column">
+        <h2 class="resume-column-title">{
+          lang === 'es' ? 'Resumen rapido' : lang === 'ca' ? 'Resum rapid' : 'Quick summary'
+        }</h2>
+        <ul class="resume-list">
+          {content.summary.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="resume-column">
+        <h2 class="resume-column-title">{
+          lang === 'es' ? 'Experiencia' : lang === 'ca' ? 'Experiencia' : 'Experience'
+        }</h2>
+        <div class="resume-experience-list">
+          {content.experience.map((item) => (
+            <article class="resume-experience-card">
+              <h3 class="resume-experience-title">{item.title}</h3>
+              <p class="resume-experience-text">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-resume-bottom">
+    <div class="container section-inner">
+      <div class="row g-4 justify-content-center">
+        {content.expertise.map((block) => (
+          <div class="col-md-6">
+            <article class="resume-focus-card">
+              <h2 class="resume-column-title">{block.title}</h2>
+              <ul class="resume-list">
+                {block.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        ))}
+      </div>
+      <p class="resume-cta-text">{content.cta}</p>
+      <div class="resume-cta">
+        <a href={`mailto:${contact.email}`} class="btn btn-primary cta-btn">Email</a>
+        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary cta-btn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -77,7 +77,7 @@
     "groupInfraDesc": "Servicios base de homelab orientados a privacidad.",
 
     "title1": "Portafolio Personal",
-    "desc1": "El sitio web que estás visitando ahora mismo es mi portafolio personal. Está desarrollado con React (Meta) y fue mi primer proyecto con este framework. Además de servir como carta de presentación, también ha sido un laboratorio de aprendizaje donde he experimentado con nuevas tecnologías de frontend. Puedes consultar el código en GitHub.",
+    "desc1": "El sitio web que estás visitando ahora mismo es mi portafolio personal. Está desarrollado con Astro y prioriza HTML semántico, rendimiento, estructura clara y mejor SEO. Además de servir como carta de presentación, también ha sido un laboratorio donde experimento con arquitectura frontend y contenido orientado a captación.",
     "src1": "https://github.com/rootkit0",
     "demo1": "https://xavierberga.com",
 
@@ -112,7 +112,7 @@
     "title8": "Broker MQTT para IoT",
     "desc8": "Eclipse Mosquitto desplegado como broker ligero de mensajería MQTT para coordinar la comunicación entre los diferentes dispositivos de mi ecosistema IoT. Gracias a este servicio, todos los dispositivos intercambian datos de manera rápida y fiable. También ofrezco acceso gratuito para entornos de desarrollo bajo petición, para quien quiera experimentar.",
     "src8": "https://github.com/eclipse-mosquitto/mosquitto",
-    "demo8": "mqtt://mqtt.xavierberga.com",
+    "demo8": "https://mqtt.xavierberga.com",
 
     "title9": "Automatización mediante n8n",
     "desc9": "n8n desplegado en servidor propio para crear flujos de automatización entre múltiples aplicaciones y servicios, sin necesidad de programar. Permite integrar APIs, gestionar datos y ejecutar procesos de forma flexible y visual. También ofrezco credenciales gratuitas bajo petición para quienes quieran probarlo y experimentar.",
@@ -174,7 +174,7 @@
     },
     "form": {
       "serviceName": "Inteligencia Artificial",
-      "emailSubject": "Consulta: Inteligencia Artificial en Zaragoza",
+      "emailSubject": "Consulta: Inteligencia Artificial",
       "messagePh": "Cuéntame el objetivo, qué datos tienes y cómo lo estás haciendo ahora."
     }
   },
@@ -203,7 +203,7 @@
     },
     "form": {
       "serviceName": "IoT",
-      "emailSubject": "Consulta: IoT en Zaragoza",
+      "emailSubject": "Consulta: IoT",
       "messagePh": "Cuéntame qué quieres medir/controlar, entorno, conectividad y fase del proyecto."
     }
   },

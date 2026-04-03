@@ -1,9 +1,4 @@
 ---
-/**
- * Contact form for landing pages.
- * This is a static Astro component – the interactivity (WhatsApp/Email) is via a
- * small inline <script> so we avoid shipping any framework JS.
- */
 interface Props {
   phone: string;
   email: string;
@@ -32,23 +27,23 @@ interface Props {
 const { phone, email, serviceLabel, city, slug, emailSubject, labels } = Astro.props;
 const formId = `form-${slug}`;
 ---
-<div class="mini-form" id={formId}>
+<form class="mini-form" id={formId}>
   <div class="row g-3">
     <div class="col-md-6">
-      <label class="form-label">{labels.name}</label>
-      <input type="text" class="form-control" data-field="name" placeholder={labels.namePh} />
+      <label class="form-label" for={`${formId}-name`}>{labels.name}</label>
+      <input id={`${formId}-name`} name="name" type="text" class="form-control" data-field="name" placeholder={labels.namePh} />
     </div>
     <div class="col-md-6">
-      <label class="form-label">{labels.company}</label>
-      <input type="text" class="form-control" data-field="company" placeholder={labels.companyPh} />
+      <label class="form-label" for={`${formId}-company`}>{labels.company}</label>
+      <input id={`${formId}-company`} name="company" type="text" class="form-control" data-field="company" placeholder={labels.companyPh} />
     </div>
     <div class="col-md-12">
-      <label class="form-label">{labels.emailLabel}</label>
-      <input type="email" class="form-control" data-field="email" placeholder={labels.emailPh} />
+      <label class="form-label" for={`${formId}-email`}>{labels.emailLabel}</label>
+      <input id={`${formId}-email`} name="email" type="email" class="form-control" data-field="email" placeholder={labels.emailPh} />
     </div>
     <div class="col-md-12">
-      <label class="form-label">{labels.message}</label>
-      <textarea class="form-control" rows="4" data-field="message" placeholder={labels.messagePh}></textarea>
+      <label class="form-label" for={`${formId}-message`}>{labels.message}</label>
+      <textarea id={`${formId}-message`} name="message" class="form-control" rows="4" data-field="message" placeholder={labels.messagePh} required></textarea>
     </div>
     <div class="col-md-12 mini-form-actions">
       <button type="button" class="btn btn-primary cta-btn" data-action="whatsapp">
@@ -60,8 +55,13 @@ const formId = `form-${slug}`;
         &nbsp; {labels.sendEmail}
       </button>
     </div>
+    <div class="col-md-12">
+      <p class="form-note">{
+        `WhatsApp / Email - ${serviceLabel} - ${city}`
+      }</p>
+    </div>
   </div>
-</div>
+</form>
 
 <script define:vars={{ formId, phone, email, serviceLabel, city, slug, emailSubject, serviceKey: labels.service, nameKey: labels.name, companyKey: labels.company, emailKey: labels.emailLabel, messageKey: labels.message, sourceKey: labels.source }}>
   const form = document.getElementById(formId);
@@ -84,6 +84,11 @@ const formId = `form-${slug}`;
     form.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-action]');
       if (!btn) return;
+      const message = form.querySelector('[data-field="message"]');
+      if (message && !message.value.trim()) {
+        message.focus();
+        return;
+      }
       const body = buildBody();
       if (btn.dataset.action === 'whatsapp') {
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(body)}`, '_blank', 'noopener,noreferrer');

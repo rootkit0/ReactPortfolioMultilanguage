@@ -1,89 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <url>
     <loc>https://www.xavierberga.com/</loc>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/?lang=ca" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://www.xavierberga.com/aboutme</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/aboutme" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/aboutme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/aboutme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/aboutme" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.xavierberga.com/projects</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/projects" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/projects" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.xavierberga.com/resume</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/resume" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/resume" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/resume" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/resume" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-  <!-- Landings IA -->
+  <url>
+    <loc>https://www.xavierberga.com/inteligencia-artificial</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/inteligencia-artificial" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/inteligencia-artificial" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/inteligencia-artificial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/inteligencia-artificial" />
+    <lastmod>2026-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.xavierberga.com/iot</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/iot" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/iot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/iot" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/iot" />
+    <lastmod>2026-04-02</lastmod>
+  </url>
   <url>
     <loc>https://www.xavierberga.com/ia-zaragoza</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/ia-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/ia-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/ia-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/ia-zaragoza" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-barcelona</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/ia-barcelona" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/ia-barcelona" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/ia-barcelona" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/ia-barcelona" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-lleida</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/ia-lleida" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/ia-lleida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/ia-lleida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/ia-lleida" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/ia-madrid</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/ia-madrid" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/ia-madrid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/ia-madrid" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/ia-madrid" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
-
-  <!-- Landings IoT -->
   <url>
     <loc>https://www.xavierberga.com/iot-zaragoza</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/iot-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/iot-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/iot-zaragoza" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/iot-zaragoza" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-barcelona</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/iot-barcelona" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/iot-barcelona" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/iot-barcelona" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/iot-barcelona" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-lleida</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/iot-lleida" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/iot-lleida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/iot-lleida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/iot-lleida" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.xavierberga.com/iot-madrid</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://www.xavierberga.com/iot-madrid" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.xavierberga.com/ca/iot-madrid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.xavierberga.com/en/iot-madrid" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.xavierberga.com/iot-madrid" />
     <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
-
 </urlset>

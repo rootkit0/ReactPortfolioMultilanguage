@@ -1,0 +1,262 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import { absoluteUrl, localePath, type Lang } from '@/i18n';
+
+import logo from '@/assets/logos/logo.png';
+import alimentando from '@/assets/logos/alimentando-logo.png';
+import agromind from '@/assets/logos/agromind-logo.png';
+import openwebui from '@/assets/logos/openwebui-logo.png';
+import nextcloud from '@/assets/logos/nextcloud-logo.png';
+import homeassistant from '@/assets/logos/home-assistant-logo.png';
+import adguard from '@/assets/logos/adguard-logo.png';
+import mqtt from '@/assets/logos/mqtt-logo.png';
+import n8n from '@/assets/logos/n8n-logo.png';
+import timemanager from '@/assets/logos/timemanager-logo.png';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const canonical = absoluteUrl(localePath(lang, '/projects'));
+const titleMap: Record<Lang, string> = {
+  es: 'Proyectos seleccionados | Xavier Berga',
+  ca: 'Projectes seleccionats | Xavier Berga',
+  en: 'Selected projects | Xavier Berga',
+};
+const descriptionMap: Record<Lang, string> = {
+  es: 'Una seleccion de proyectos que explican mejor mi trabajo entre producto propio, automatizacion, IA, IoT e infraestructura.',
+  ca: 'Una seleccio de projectes que expliquen millor la meva feina entre producte propi, automatitzacio, IA, IoT i infraestructura.',
+  en: 'A selection of projects that best explain my work across product, automation, AI, IoT, and infrastructure.',
+};
+
+const labels = {
+  visit: { es: 'Ver mas', ca: 'Veure mes', en: 'View more' },
+  source: { es: 'Codigo', ca: 'Codi', en: 'Source' },
+};
+
+const featured = [
+  {
+    imgSrc: agromind.src,
+    imgAlt: 'AgroMind',
+    title: { es: 'AgroMind', ca: 'AgroMind', en: 'AgroMind' },
+    description: {
+      es: 'Proyecto propio centrado en sensado agricola y ganadero, firmware, validacion en campo y evolucion de plataforma con apoyo de IA.',
+      ca: 'Projecte propi centrat en sensat agricol i ramader, firmware, validacio al camp i evolucio de plataforma amb suport d IA.',
+      en: 'Own product focused on agricultural and livestock sensing, firmware, field validation, and platform evolution with AI support.',
+    },
+    demoLink: 'https://agromind.es',
+  },
+  {
+    imgSrc: timemanager.src,
+    imgAlt: 'TimeManager',
+    title: { es: 'TimeManager', ca: 'TimeManager', en: 'TimeManager' },
+    description: {
+      es: 'Aplicacion web gratuita para control horario, gestion de turnos, vacaciones y documentacion laboral con enfoque practico.',
+      ca: 'Aplicacio web gratuIta per al control horari, gestio de torns, vacances i documentacio laboral amb enfocament practic.',
+      en: 'Free web app for time tracking, shifts, vacations, and work documents with a practical product mindset.',
+    },
+    demoLink: 'https://timemanager.es',
+  },
+];
+
+const automation = [
+  {
+    imgSrc: openwebui.src,
+    imgAlt: 'Open WebUI',
+    title: { es: 'Plataforma LLM self-hosted', ca: 'Plataforma LLM self-hosted', en: 'Self-hosted LLM platform' },
+    description: {
+      es: 'Entorno propio para experimentar con modelos LLM, asistentes y casos de uso especificos sin depender de servicios externos.',
+      ca: 'Entorn propi per experimentar amb models LLM, assistents i casos d us especifics sense dependre de serveis externs.',
+      en: 'Self-hosted environment to experiment with LLMs, assistants, and specific use cases without depending on external services.',
+    },
+    srcLink: 'https://github.com/open-webui/open-webui',
+    demoLink: 'https://ia.xavierberga.com',
+    openSource: true,
+  },
+  {
+    imgSrc: n8n.src,
+    imgAlt: 'n8n',
+    title: { es: 'Automatizacion con n8n', ca: 'Automatitzacio amb n8n', en: 'Automation with n8n' },
+    description: {
+      es: 'Flujos self-hosted para integrar APIs, mover datos y acelerar tareas internas sin perder control tecnico.',
+      ca: 'Fluxos self-hosted per integrar APIs, moure dades i accelerar tasques internes sense perdre control tecnic.',
+      en: 'Self-hosted flows to integrate APIs, move data, and accelerate internal tasks without losing technical control.',
+    },
+    srcLink: 'https://github.com/n8n-io/n8n',
+    demoLink: 'https://n8n.xavierberga.com',
+    openSource: true,
+  },
+  {
+    imgSrc: alimentando.src,
+    imgAlt: 'Alimentando con Ciencia',
+    title: { es: 'Alimentando con Ciencia', ca: 'Alimentando con Ciencia', en: 'Alimentando con Ciencia' },
+    description: {
+      es: 'Proyecto orientado a auditoria, formacion y digitalizacion de procesos para la industria alimentaria.',
+      ca: 'Projecte orientat a auditoria, formacio i digitalitzacio de processos per a la industria alimentaria.',
+      en: 'Project focused on auditing, training, and process digitization for the food industry.',
+    },
+    demoLink: 'https://alimentandoconciencia.com',
+  },
+];
+
+const lab = [
+  {
+    imgSrc: homeassistant.src,
+    imgAlt: 'Home Assistant',
+    title: { es: 'Home Assistant', ca: 'Home Assistant', en: 'Home Assistant' },
+    description: {
+      es: 'Base domotica y laboratorio para automatizacion, integracion de dispositivos y pruebas de operacion real.',
+      ca: 'Base domotica i laboratori per a automatitzacio, integracio de dispositius i proves d operacio real.',
+      en: 'Home automation base and lab for automation, device integration, and real operation testing.',
+    },
+    srcLink: 'https://github.com/home-assistant',
+    demoLink: 'https://home.xavierberga.com',
+    openSource: true,
+  },
+  {
+    imgSrc: mqtt.src,
+    imgAlt: 'MQTT',
+    title: { es: 'Broker MQTT', ca: 'Broker MQTT', en: 'MQTT broker' },
+    description: {
+      es: 'Mensajeria ligera para coordinar dispositivos y pruebas IoT. Forma parte de un stack mayor de telemetria y automatizacion.',
+      ca: 'Missatgeria lleugera per coordinar dispositius i proves IoT. Forma part d un stack mes gran de telemetria i automatitzacio.',
+      en: 'Lightweight messaging to coordinate devices and IoT testing. Part of a broader telemetry and automation stack.',
+    },
+    srcLink: 'https://github.com/eclipse-mosquitto/mosquitto',
+    openSource: true,
+  },
+  {
+    imgSrc: nextcloud.src,
+    imgAlt: 'Nextcloud',
+    title: { es: 'Nextcloud', ca: 'Nextcloud', en: 'Nextcloud' },
+    description: {
+      es: 'Nube personal e infraestructura privada para archivos, sincronizacion y trabajo con datos propios.',
+      ca: 'Nuvol personal i infraestructura privada per a fitxers, sincronitzacio i treball amb dades propies.',
+      en: 'Private cloud infrastructure for files, sync, and working with owned data.',
+    },
+    srcLink: 'https://github.com/nextcloud',
+    demoLink: 'https://nextcloud.xavierberga.com',
+    openSource: true,
+  },
+  {
+    imgSrc: adguard.src,
+    imgAlt: 'AdGuard',
+    title: { es: 'AdGuard Home', ca: 'AdGuard Home', en: 'AdGuard Home' },
+    description: {
+      es: 'Privacidad y control de red a nivel domestico como parte de un stack self-hosted orientado a seguridad y autonomia.',
+      ca: 'Privacitat i control de xarxa a nivell domestic com a part d un stack self-hosted orientat a seguretat i autonomia.',
+      en: 'Privacy and network control at home level as part of a self-hosted stack focused on security and autonomy.',
+    },
+    srcLink: 'https://github.com/AdguardTeam/AdGuardHome',
+    demoLink: 'https://adguard.xavierberga.com',
+    openSource: true,
+  },
+  {
+    imgSrc: logo.src,
+    imgAlt: 'Portfolio',
+    title: { es: 'Este sitio', ca: 'Aquest lloc', en: 'This site' },
+    description: {
+      es: 'Portafolio construido con Astro para priorizar HTML util, rendimiento, estructura clara y mejor SEO.',
+      ca: 'Portfoli construit amb Astro per prioritzar HTML util, rendiment, estructura clara i millor SEO.',
+      en: 'Portfolio built with Astro to prioritize useful HTML, performance, clear structure, and stronger SEO.',
+    },
+    srcLink: 'https://github.com/rootkit0',
+    demoLink: 'https://xavierberga.com',
+    openSource: true,
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: titleMap[lang],
+  description: descriptionMap[lang],
+  url: canonical,
+  author: { '@id': `${absoluteUrl('/')}#person` },
+};
+---
+<BaseLayout lang={lang} title={titleMap[lang]} description={descriptionMap[lang]} canonical={canonical} jsonLd={jsonLd}>
+  <section class="section-block section-projects-hero">
+    <div class="container section-inner">
+      <p class="section-kicker">{
+        lang === 'es' ? 'Producto, automatizacion e infraestructura' : lang === 'ca' ? 'Producte, automatitzacio i infraestructura' : 'Product, automation, and infrastructure'
+      }</p>
+      <h1 class="section-title gradient-heading">{titleMap[lang].replace(' | Xavier Berga', '')}</h1>
+      <p class="project-subheading">{descriptionMap[lang]}</p>
+    </div>
+  </section>
+
+  <section class="section-block section-projects-pro">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Lo mas representativo ahora mismo' : lang === 'ca' ? 'El mes representatiu ara mateix' : 'Most representative right now'
+      }</h2>
+      <div class="row" style="justify-content:center">
+        {featured.map((project) => (
+          <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+            <ProjectCard
+              imgSrc={project.imgSrc}
+              imgAlt={project.imgAlt}
+              title={project.title[lang]}
+              description={project.description[lang]}
+              demoLink={project.demoLink}
+              visitText={labels.visit[lang]}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-projects-ai">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'IA, automatizacion y herramientas internas' : lang === 'ca' ? 'IA, automatitzacio i eines internes' : 'AI, automation, and internal tooling'
+      }</h2>
+      <div class="row" style="justify-content:center">
+        {automation.map((project) => (
+          <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+            <ProjectCard
+              imgSrc={project.imgSrc}
+              imgAlt={project.imgAlt}
+              title={project.title[lang]}
+              description={project.description[lang]}
+              srcLink={project.srcLink}
+              demoLink={project.demoLink}
+              visitText={labels.visit[lang]}
+              openSource={project.openSource}
+              sourceText={labels.source[lang]}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-projects-infra">
+    <div class="container section-inner">
+      <h2 class="section-title gradient-heading">{
+        lang === 'es' ? 'Laboratorio tecnico, IoT y privacidad' : lang === 'ca' ? 'Laboratori tecnic, IoT i privacitat' : 'Technical lab, IoT, and privacy'
+      }</h2>
+      <div class="row" style="justify-content:center">
+        {lab.map((project) => (
+          <div class="col-12 col-md-6 col-lg-6 col-xl-5 project-card">
+            <ProjectCard
+              imgSrc={project.imgSrc}
+              imgAlt={project.imgAlt}
+              title={project.title[lang]}
+              description={project.description[lang]}
+              srcLink={project.srcLink}
+              demoLink={project.demoLink}
+              visitText={labels.visit[lang]}
+              openSource={project.openSource}
+              sourceText={labels.source[lang]}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

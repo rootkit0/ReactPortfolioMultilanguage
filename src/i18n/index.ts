@@ -8,6 +8,8 @@ const translations: Record<Lang, Record<string, any>> = { es, ca, en };
 
 export const defaultLang: Lang = 'es';
 export const supportedLangs: Lang[] = ['es', 'ca', 'en'];
+const prefixedLangs = supportedLangs.filter((lang) => lang !== defaultLang);
+const baseUrl = 'https://www.xavierberga.com';
 
 /**
  * Deep-get a nested key from a translation object.
@@ -25,39 +27,60 @@ export function t(lang: Lang, key: string): any {
   return val ?? key;
 }
 
-/**
- * Resolve lang from cookie, query param, or Accept-Language header.
- */
-export function resolveLang(request: Request): Lang {
-  const url = new URL(request.url);
+function normalizePath(path: string): string {
+  if (!path) return '/';
+  let normalized = path.startsWith('/') ? path : `/${path}`;
+  if (normalized.length > 1 && normalized.endsWith('/')) {
+    normalized = normalized.slice(0, -1);
+  }
+  return normalized || '/';
+}
 
-  // 1. ?lang=xx query param
-  const qp = url.searchParams.get('lang');
-  if (qp && supportedLangs.includes(qp as Lang)) return qp as Lang;
+export function stripLangFromPath(path: string): string {
+  const normalized = normalizePath(path);
 
-  // 2. cookie
-  const cookie = request.headers.get('cookie') ?? '';
-  const match = cookie.match(/(?:^|;\s*)lang=(\w+)/);
-  if (match && supportedLangs.includes(match[1] as Lang)) return match[1] as Lang;
+  for (const lang of prefixedLangs) {
+    if (normalized === `/${lang}`) return '/';
+    if (normalized.startsWith(`/${lang}/`)) {
+      return normalized.slice(lang.length + 1) || '/';
+    }
+  }
 
-  // 3. Accept-Language header
-  const accept = request.headers.get('accept-language') ?? '';
-  for (const part of accept.split(',')) {
-    const code = part.trim().split(';')[0].split('-')[0].toLowerCase();
-    if (supportedLangs.includes(code as Lang)) return code as Lang;
+  return normalized;
+}
+
+export function langFromPath(path: string): Lang {
+  const normalized = normalizePath(path);
+
+  for (const lang of prefixedLangs) {
+    if (normalized === `/${lang}` || normalized.startsWith(`/${lang}/`)) {
+      return lang;
+    }
   }
 
   return defaultLang;
 }
 
-/** Build hreflang link tags for a given path */
+export function localePath(lang: Lang, path: string): string {
+  const normalized = stripLangFromPath(path);
+  if (lang === defaultLang) return normalized;
+  return normalized === '/' ? `/${lang}` : `/${lang}${normalized}`;
+}
+
+export function absoluteUrl(path: string): string {
+  return new URL(path, baseUrl).toString();
+}
+
+export function resolveLang(request: Request): Lang {
+  return langFromPath(new URL(request.url).pathname);
+}
+
 export function hreflangLinks(path: string): { lang: string; href: string }[] {
-  const base = 'https://www.xavierberga.com';
-  const canonical = `${base}${path}`;
+  const logicalPath = stripLangFromPath(path);
   return [
-    { lang: 'es-ES', href: canonical },
-    { lang: 'ca', href: `${canonical}${path.includes('?') ? '&' : '?'}lang=ca` },
-    { lang: 'en', href: `${canonical}${path.includes('?') ? '&' : '?'}lang=en` },
-    { lang: 'x-default', href: canonical },
+    { lang: 'es-ES', href: absoluteUrl(localePath('es', logicalPath)) },
+    { lang: 'ca', href: absoluteUrl(localePath('ca', logicalPath)) },
+    { lang: 'en', href: absoluteUrl(localePath('en', logicalPath)) },
+    { lang: 'x-default', href: absoluteUrl(localePath(defaultLang, logicalPath)) },
   ];
 }

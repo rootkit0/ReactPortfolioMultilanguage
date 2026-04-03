@@ -1,7 +1,4 @@
 ---
 import AILanding from '@/components/AILanding.astro';
-import { resolveLang, t } from '@/i18n';
-const lang = resolveLang(Astro.request);
-const city = t(lang, 'cities.madrid') || 'Madrid';
 ---
-<AILanding lang={lang} city={city} slug="madrid" />
+<AILanding lang="es" city="Madrid" slug="madrid" />
